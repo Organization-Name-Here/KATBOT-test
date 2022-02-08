@@ -11,8 +11,8 @@ body {
 td {
   width: 101px;
 }
-/* toggle switch */
 
+/* toggle switch */
 .toggle[type=checkbox] {
   appearance: none;
   cursor: pointer;
