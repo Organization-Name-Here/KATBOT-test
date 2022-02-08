@@ -8,9 +8,6 @@ body {
 .first{
   width: 10px;
 }
-td {
-  width: 101px;
-}
 
 /* toggle switch */
 .toggle[type=checkbox] {
