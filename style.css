@@ -6,12 +6,13 @@ body {
   background-color: rgb(34, 34, 34);
 }
 .first{
-  width:10px;
+  width: 10px;
 }
 td {
   width: 101px;
 }
 /* toggle switch */
+
 .toggle[type=checkbox] {
   appearance: none;
   cursor: pointer;
@@ -30,13 +31,13 @@ td {
   transition: all 0.2s ease;
 }
 .input{
-  width:80px;
+  width: 80px;
 }
 
 .bold {
   font-size: 12px;
-  padding-left: .5em;
-  padding-right: .5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 .toggle::after {
   content: "";
