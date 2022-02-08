@@ -1,11 +1,15 @@
 body {
   background: #1F2227;
+}
+
+.flexdiv {
+  background: #1F2227;
   display: flex;
   flex-wrap: wrap;
   position: absolute;
-  background-color: rgb(34, 34, 34);
 }
-.first{
+
+.first {
   width: 10px;
 }
 
@@ -14,9 +18,11 @@ body {
   appearance: none;
   cursor: pointer;
 }
+
 .toggle[type=checkbox]:focus {
   outline: 0;
 }
+
 .toggle {
   height: 32px;
   width: 52px;
@@ -27,7 +33,8 @@ body {
   background: linear-gradient(180deg, #2D2F39 0%, #1F2027 100%);
   transition: all 0.2s ease;
 }
-.input{
+
+.input {
   width: 80px;
 }
 
@@ -36,6 +43,7 @@ body {
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
+
 .toggle::after {
   content: "";
   position: absolute;
@@ -48,9 +56,11 @@ body {
   box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
   transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
 }
+
 .toggle:checked {
   border-color: #654FEC;
 }
+
 .toggle:checked::after {
   transform: translateX(20px);
 }
@@ -60,9 +70,11 @@ body {
   content: "off";
   font-size: 20px;
 }
-.test .toggle:checked ~ .notification::before {
+
+.test .toggle:checked~.notification::before {
   content: "on";
 }
+
 .test .notification {
   font-size: 20px;
   width: 100%;
@@ -72,6 +84,7 @@ body {
 .tet {
   color: black;
 }
+
 .thing {
   padding-left: 0.5em;
   padding-right: 0.5em;
