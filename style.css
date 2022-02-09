@@ -1,5 +1,6 @@
 body {
   background: #1F2227;
+  font-family: "Helvetica", sans-serif;
 }
 
 .flexdiv {
@@ -11,6 +12,36 @@ body {
 
 .first {
   width: 10px;
+}
+
+.outlines {
+  border-width: 2px;
+  border-color: #424242;
+  border-style: solid;
+}
+
+.none {
+  color: #2CA198;
+}
+
+.warning {
+  color: red;
+}
+
+.commented {
+  color: #5c6370;
+}
+
+.see-vertical-bar {
+  color: #42b37e;
+}
+
+.single-qoute {
+  color: #FFFF00;
+}
+
+.double-qoute {
+  color: #FF8000;
 }
 
 /* toggle switch */
