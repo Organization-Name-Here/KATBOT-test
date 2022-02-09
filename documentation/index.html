@@ -6,8 +6,171 @@
   </head>
 
   <body>
-    <div>
-      <span>test</span>
+    <div class="flexdiv">
+      <div class="outlines">
+        <span><span class="warning"><b>YES PUT THE</b> <span class="double-qoute">"</span> yes thay have to be <span class="double-qoute">"</span> <b>NOT</b> <span class="single-qoute">'</span></span><br>
+          every thing outside of these &lt;x&gt; within [ ] is required
+          <pre><span class="commented">#</span> is just a comment out it means nothing and every thing on that line after it(including it) should be not be added to the message
+    <span class="commented">#except for use in calling a custom command from another channel then the same as above just double ##</span></pre>
+          <span class="see-vertical-bar">|</span> or<br>
+          &lt;x&gt; one input<br>
+          &lt;y&gt; another input<br>
+          &lt;z&gt; a third input<br>
+          &lt;x<span class="see-vertical-bar">|</span>y<span class="see-vertical-bar">|</span>z&gt; x or y or z<br>
+          [] option<br>
+          [&lt;x&gt; &lt;y<span class="see-vertical-bar">|</span>z&gt;] x and y or x and z<br>
+          &lt;viewer&gt; viewer name<br>
+          &lt;empty&gt; nothing for that input<br>
+          None means there is no augments at all, NOT None being the augment<br>
+          () is a note and only there to clarify usage DO NOT add () or anything inside it in message<br>
+        </span>
+        <span>
+          <pre>
+<span class="commented">#access hierarchy</span>
+    creator
+    broadcaster
+    moderator
+    vip
+    subscriber
+    everyone</pre>
+        </span>
+      </div>
+      <div style='height:10px'></div>
+      <div class="outlines">
+        <b><span>commands</span></b>
+        <ul class='spanclass'>
+          <li>touch</li>
+          <li>me &lt;x&gt; <span class="commented">#uses /me command as KATBOT</span></li>
+          <li>8ball &lt;x&gt; <span class="commented">#ask the magic 8ball a question</span></li>
+          <li>______</li>
+          <li>botrespond</li>
+          <li>roll [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[&lt;x&gt; &lt;empty&gt;]<span class="see-vertical-bar">|</span>[&lt;x&gt; d&lt;y&gt;] <span class="commented">#rolls a die if left empty or a amount of 6 side dice if given number or a amount of up to 20 d20s if given number then d then number</span></li>
+          <li>maiq <span class="commented">#gives you a quote from M'aiq</span></li>
+          <li>____ </li>
+          <li>joke &lt;empty&gt;<span class="see-vertical-bar">|</span>[api &lt;id of joke&gt;] <span class="commented">#tell you a joke api &lt;id of joke&gt; #gets joke from given id from <a href="https://icanhazdadjoke.com/">https://icanhazdadjoke.com</a></span></li>
+          <li>rotface 'Hey buddy, spare a cap?'</li>
+          <li>suzy "&lt;x&gt;" "&lt;y&gt;" "&lt;z&gt;"</li>
+          <li>didnt &lt;viewer<span class="see-vertical-bar">|</span>empty&gt;<span class="see-vertical-bar">|</span>&lt;viewer&gt; &lt;another viewer<span class="see-vertical-bar">|</span>empty&gt;</li>
+          <li>flipcoin</li>
+          <li>maze</li>
+          <li>xkcd &lt;empty&gt;<span class="see-vertical-bar">|</span>&lt;comic number&gt; <span class="commented">#returns random xkcd comic or Gets the XKCD comic based on number</span></li>
+          <li>portal o|n x&lt;coordinate&gt; z&lt;coordinate&gt; <span class="commented">#input n/o x z coordinates to get returned n/o not inputted portal placement coordinates (e.g. if n input then o output)</span></li>
+          <li>quote &lt;empty&gt;<span class="see-vertical-bar">|</span>&lt;index&gt;<span class="see-vertical-bar">|</span>[add<span class="see-vertical-bar">|</span>remove &lt;x&gt;] <span class="commented">#empty gives quote, index gives given quote in that index</span></li>
+          <li>iconic <span class="commented">#some quotes I've collected</span></li>
+          <li>rip -&lt;x&gt;<span class="see-vertical-bar">|</span>[&lt;_____<span class="see-vertical-bar">|</span>count<span class="see-vertical-bar">|</span>reset<span class="see-vertical-bar">|</span>empty&gt;] <span class="commented">#add death to broadcaster if left empty, remove death if given - then number(no space) rese</span></li>nd can give count<br>
+          <li>use &lt;viewer&gt;<span class="see-vertical-bar">|</span>&lt;empty&gt; <span class="commented">#use a attack move from Pokemon</span></li>
+          <li>math &lt;number&gt; +<span class="see-vertical-bar">|</span>-<span class="see-vertical-bar">|</span>*<span class="see-vertical-bar">|</span>**<span class="see-vertical-bar">|</span>/<span class="see-vertical-bar">|</span>// &lt;number&gt; <span class="commented">#able to do complex math +, –, *, ** (Power), / Division (float), // Division (floor) % Modulus: returns the remainder when first operand is divided by the second x % y</span></li>
+          <li>echo &lt;x&gt; <span class="commented">#makes KATBOT say what ever is after "echo "</span></li>
+          <li>house &lt;x<span class="see-vertical-bar">|</span>empty&gt; <span class="commented">#He kneels before no banner, owes allegiance to no Kell.</span></li>
+          <li>
+            <pre>viewers <span class="commented">#gets viewer count</span>
+    <span class="commented">#augments</span>
+    <span class="none">None</span> <span class="commented">#everyone up</span></pre>
+          </li>
+          <li>
+            <pre>chatters <span class="commented">#gets current amount of users connected to chat</span>
+    <span class="commented">#augments</span>
+    <span class="none">None</span> <span class="commented">#everyone up</span></pre>
+          </li>
+          <li>uptime <span class="commented">#get how long the stream has been live</span></li>
+          <li>
+            <pre>#&lt;channel name&gt;/&lt;command name&gt; <span class="commented">##use a custom command from another channel to clarify / does not mean one or the other</span>
+    <span class="commented">#augments</span>
+    <span class="none">None</span> <span class="commented">#mods up</span></pre>
+          </li>
+          <li>test</li>
+          <li>permit &lt;viewer&gt; <span class="commented">#allows a non mod/vip/sub to post one link</span></li>
+          <li>exit</li>
+          <li>about</li>
+          <li>supportlink</li>
+          <li>
+            <pre>title &lt;x&gt;<span class="see-vertical-bar">|</span>&lt;empty&gt; <span class="commented">#changes title or leave empty to current title</span>
+    <span class="commented">#augments</span>
+    &lt;x&gt; <span class="commented">#mods up #changes title to &lt;x&gt;</span>
+    &lt;empty&gt; <span class="commented">#everyone up #gets current title</span></pre>
+          </li>
+          <li>
+            <pre>game &lt;x&gt;<span class="see-vertical-bar">|</span>&lt;empty&gt; <span class="commented">#changes game or leave empty to current game</span>
+    <span class="commented">#augments</span>
+    &lt;x&gt; <span class="commented">#mods up #changes gmae to &lt;x&gt;</span>
+    &lt;empty&gt; <span class="commented">#everyone up #gets current game</span></pre>
+          </li>
+          <li>searchgame &lt;x&gt; <span class="commented">#game look up</span></li>
+          <li>
+            <pre>localvars add<span class="see-vertical-bar">|</span>edit<span class="see-vertical-bar">|</span>&lt;empty&gt; &lt;local var name&gt; [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[<span class="warning">(only with add|edit)</span>&lt;x&gt; &lt;y&gt;]<span class="see-vertical-bar">|</span>[remove &lt;x&gt;] <span class="commented">#add/modify or remove a local variable(LV)(used in code) or return LV response given LV name or return all LVs when empty</span>
+    <span class="commented">#examble</span>
+        <span>!localvars edit prefix %</span>
+    <span class="none">"prefix"</span> default:! <span class="commented">#command prefix</span>
+    <span class="none">"ComCoolDown"</span> default:1 <span class="commented">#command cool down(in minutes) to avoid command spam(does not apply to mods and broadcaster)</span>
+    <span class="none">"TimeOutAmount"</span> default:300(5min) <span class="commented">#default amount of time a user gets timed out for(in seconds)</span>
+    <span class="none">"CapsAmount"</span> default:60 <span class="commented">#percentage of capital letters allowed in message</span>
+    <span class="none">"SymbolAmount"</span> default:30 <span class="commented">#percentage of symbols allowed in message</span>
+    <span class="none">"DonationLink"</span> default:"" <span class="commented">#donation link</span></pre>
+          </li>
+          <li>access &lt;command name&gt; [mod<span class="see-vertical-bar">|</span>vip<span class="see-vertical-bar">|</span>sub<span class="see-vertical-bar">|</span>eve true<span class="see-vertical-bar">|</span>false]|[user add<span class="see-vertical-bar">|</span>remove &lt;viewer&gt;] <span class="commented">#change what level of viewer can access the given command can also limit a command to a specific user(does not include creator or broadcaster)</span></li>
+          <li><span class="commented">#does not work right now</span> followage &lt;viewer&gt; &lt;empty&gt;<span class="see-vertical-bar">|</span>stats <span class="commented">#gets how long a user or yourself has been following the broadcaster</span></li>
+        </ul>
+      </div>
+      <div class="outlines">
+        <span>commands add|edit|&lt;empty&gt; &lt;command name&gt; [&lt;empty&gt;]|[(only with add|edit)&lt;x&gt; &lt;$y|y&gt;]|[remove &lt;x&gt;]</span>
+        <ul>
+          <li> <span class="commented">#add/modify or remove a command or return response of command when given command name or return all commands when empty for more complex commands add $ at the start of the command</span></li>
+          <li><span class="commented">#using {user} or {input} more than once will result in duplicate text but you CAN use them more than once if you want</span></li>
+          <li>{stmrname} <span class="commented">#adds broadcaster name to message</span></li>
+          <li>{user} <span class="commented">#puts user name of who used the command in the command response</span></li>
+          <li>{nickname} <span class="commented">#it puts katcbot.</span></li>
+          <li>{game} <span class="commented">#puts current game name</span></li>
+          <li>{title} <span class="commented">#puts current stream title</span></li>
+          <li>{youtube} <span class="commented">#puts message through KATCBOTS built in YouTube tittle function, will not work if there is not a YouTube link in message</span></li>
+          <li>{math-(math)} <span class="commented">#usage {math-(math in here)} allows complex math like {math-(((520/4.536)/(19*3.937)**2)*703)} for example (see command "math" for more info)</span></li>
+          <li>{input} <span class="commented">#make command only work with a input from a user (eg CommandName UserInput)</span></li>
+          <li>{DonLink} <span class="commented">#add donation(saved in local vars) link to message</span></li>
+          <li>{r-aListName} <span class="commented">#picks random entry from a list, available lists ("ball8","____","didnt","farewell","greeting","jokes","quotes","iconic","response","touch","maiq", "FM"(Pokemon fighting moves),"Taniks")</span> </li>
+        </ul>
+      </div>
+      <div class="outlines">
+        <span>color &lt;color name&gt; &lt;y&gt; #make my console light up, makes the given message colored in console</span>
+        <pre>
+    <span class="commented">available colors, b = background, f = foreground</span>
+    "b light black", "<span style="background: lightblue;">b light blue</span>", "<span style="background: lightgreen;">b light green</span>", "<span style="background: lightcyan;">b light cyan</span>", "<span style="background: #ff3535;">b light red</span>", "<span style="background: #ff35ff;">b light magenta</span>", "<span style="background: lightyellow;">b light yellow</span>",
+    "b light white", "<span style="color: white; background:black;">b black</span>", "<span style="background:blue;">b blue</span>", "<span style="background:green;">b green</span>", "<span style="background:cyan;">b cyan</span>", "<span style="background:red;">b red</span>", "<span style="background:magenta;">b magenta</span>", "<span style="background:yellow;">b yellow</span>", "<span style="background:white;">b white</span>", "f light black",
+    "<span style="color: lightblue;">f light blue</span>", "<span style="color: lightgreen;">f light green</span>", "<span style="color: lightcyan;">f light cyan</span>", "<span style="color: #ff3535;">f light red</span>", "<span style="color: #ff35ff;">f light magenta</span>", "<span style="color: lightyellow;">f light yellow</span>", "f light white",
+    "f black", "<span style="color: blue;">f blue</span>", "<span style="color: green;">f green</span>", "<span style="color: cyan;">f cyan</span>", "<span style="color: red;">f red</span>", "<span style="color: magenta;">f magenta</span>", "<span style="color: yellow;">f yellow</span>", "<span style="color:white;">f white</span>"</pre>
+      </div>
+      <div class="outlines">
+        <span>repeatmsg add|edit|&lt;empty&gt; &lt;repeating msg name&gt; [&lt;empty&gt;]|[(only with add|edit)&lt;time|delay|empty&gt; &lt;x&gt;]|[remove &lt;x&gt;]</span>
+        <pre>
+    <span class="commented">#add/modify or remove a repmsg(repeating message) or return repmsg response if given repmsg name or return all repmsgs when empty, default time is 30 minutes but time for 
+    the repmsg can be changed after making it by using the time augment, use of $ is allowed usage shown in commands</span>
+    <span class="commented">#{user}, {input}, {math} DO NOT work in repeating messages and will be removed!</span>
+    <span class="commented">#{youtube} might not work in repeating messages still needs to be tested</span>
+        </pre>
+      </div>
+      <div class="outlines">
+        <span>autoreply add|edit|&lt;empty&gt; &lt;auto replay name&gt; [&lt;empty&gt;]|[(only with add|edit)&lt;chance|empty&gt; &lt;x&gt;]|[remove &lt;x&gt;]</span>
+        <pre>
+    <span class="commented">#add/modify or remove a arlys(auto replay) or return arlys response if given arlys name or return all arlys when empty, default random chance 30 but chance for the arlys 
+    can be changed after making it by using the chance augment, use of $ is allowed usage shown in commands</span>
+    <span class="commented">#{youtube} DOES NOT work in arlys messages and will be removed!</span>
+    <span class="commented">#{input} special case, it will be the last message sent in chat</span></pre>
+      </div>
+      <div class="outlines">
+        <span>evolve [&lt;Pokémon name&gt; &lt;empty|abilities|moves|bmi|stats|type&gt;]|[damage &lt;pk type&gt;] <span class="commented">#leave empty to get evolution chain</span></span>
+        <pre>
+        <span class="commented">#augments</span>
+        &lt;Pokémon name&gt; <span class="commented">#everyone up</span>
+            empty <span class="commented">     #gets evolution chain and Minimum Level(ML) to evolve</span>
+            abilities <span class="commented"> #gets the abilities of the pokemon</span>
+            moves <span class="commented">     #GETS ALL the moves for the pokemon from across all games DOES NOT tell you what move comes from where</span>
+            bmi <span class="commented">       #gets height and Weight of the pokemon and calculates the bmi(body mass index)</span>
+            stats <span class="commented">     #gets stats of the pokemon: hp, attack, defense, special-attack, special-defense, speed,</span>
+            type <span class="commented">      #gets the type of Pokemon: fire, fighting, etc.</span>
+        damge <span class="commented">#everyone up</span>
+           &lt;pk type&gt; <span class="commented">  #get damage relations of a Pokémon type eg fire, fighting</span></pre>
+      </div>
+      <!--<div>
+        <span>test</span>
+      </div>-->
     </div>
   </body>
 
