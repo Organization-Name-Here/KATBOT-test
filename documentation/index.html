@@ -25,8 +25,7 @@
           () is a note and only there to clarify usage DO NOT add () or anything inside it in message<br>
         </span>
         <span>
-          <pre>
-<span class="commented">#access hierarchy</span>
+          <pre><span class="commented">#access hierarchy</span>
     creator
     broadcaster
     moderator
@@ -35,10 +34,10 @@
     everyone</pre>
         </span>
       </div>
-      <div style='height:10px'></div>
+      <div style="height:10px"></div>
       <div class="outlines">
         <b><span>commands</span></b>
-        <ul class='spanclass'>
+        <ul class="spanclass">
           <li>touch</li>
           <li>me &lt;x&gt; <span class="commented">#uses /me command as KATBOT</span></li>
           <li>8ball &lt;x&gt; <span class="commented">#ask the magic 8ball a question</span></li>
@@ -130,17 +129,15 @@
       </div>
       <div class="outlines">
         <span>color &lt;color name&gt; &lt;y&gt; #make my console light up, makes the given message colored in console</span>
-        <pre>
-    <span class="commented">available colors, b = background, f = foreground</span>
-    "b light black", "<span style="background: lightblue;">b light blue</span>", "<span style="background: lightgreen;">b light green</span>", "<span style="background: lightcyan;">b light cyan</span>", "<span style="background: #ff3535;">b light red</span>", "<span style="background: #ff35ff;">b light magenta</span>", "<span style="background: lightyellow;">b light yellow</span>",
-    "b light white", "<span style="color: white; background:black;">b black</span>", "<span style="background:blue;">b blue</span>", "<span style="background:green;">b green</span>", "<span style="background:cyan;">b cyan</span>", "<span style="background:red;">b red</span>", "<span style="background:magenta;">b magenta</span>", "<span style="background:yellow;">b yellow</span>", "<span style="background:white;">b white</span>", "f light black",
+        <pre>    <span class="commented">available colors, b = background, f = foreground</span>
+    "b light black", "<span style="color:black; background: lightblue;">b light blue</span>", "<span style="color:black; background: lightgreen;">b light green</span>", "<span style="color:black; background: lightcyan;">b light cyan</span>", "<span style="background: #ff3535;">b light red</span>", "<span style="background: #ff35ff;">b light magenta</span>", "<span style="color:black; background: lightyellow;">b light yellow</span>",
+    "b light white", "<span style="color: white; background:black;">b black</span>", "<span style="background:blue;">b blue</span>", "<span style="background:green;">b green</span>", "<span style="color:black; background:cyan;">b cyan</span>", "<span style="background:red;">b red</span>", "<span style="background:magenta;">b magenta</span>", "<span style="color:black; background:yellow;">b yellow</span>", "<span style="color:black; background:white;">b white</span>", "f light black",
     "<span style="color: lightblue;">f light blue</span>", "<span style="color: lightgreen;">f light green</span>", "<span style="color: lightcyan;">f light cyan</span>", "<span style="color: #ff3535;">f light red</span>", "<span style="color: #ff35ff;">f light magenta</span>", "<span style="color: lightyellow;">f light yellow</span>", "f light white",
     "f black", "<span style="color: blue;">f blue</span>", "<span style="color: green;">f green</span>", "<span style="color: cyan;">f cyan</span>", "<span style="color: red;">f red</span>", "<span style="color: magenta;">f magenta</span>", "<span style="color: yellow;">f yellow</span>", "<span style="color:white;">f white</span>"</pre>
       </div>
       <div class="outlines">
         <span>repeatmsg add|edit|&lt;empty&gt; &lt;repeating msg name&gt; [&lt;empty&gt;]|[(only with add|edit)&lt;time|delay|empty&gt; &lt;x&gt;]|[remove &lt;x&gt;]</span>
-        <pre>
-    <span class="commented">#add/modify or remove a repmsg(repeating message) or return repmsg response if given repmsg name or return all repmsgs when empty, default time is 30 minutes but time for 
+        <pre>    <span class="commented">#add/modify or remove a repmsg(repeating message) or return repmsg response if given repmsg name or return all repmsgs when empty, default time is 30 minutes but time for 
     the repmsg can be changed after making it by using the time augment, use of $ is allowed usage shown in commands</span>
     <span class="commented">#{user}, {input}, {math} DO NOT work in repeating messages and will be removed!</span>
     <span class="commented">#{youtube} might not work in repeating messages still needs to be tested</span>
@@ -148,16 +145,14 @@
       </div>
       <div class="outlines">
         <span>autoreply add|edit|&lt;empty&gt; &lt;auto replay name&gt; [&lt;empty&gt;]|[(only with add|edit)&lt;chance|empty&gt; &lt;x&gt;]|[remove &lt;x&gt;]</span>
-        <pre>
-    <span class="commented">#add/modify or remove a arlys(auto replay) or return arlys response if given arlys name or return all arlys when empty, default random chance 30 but chance for the arlys 
+        <pre>    <span class="commented">#add/modify or remove a arlys(auto replay) or return arlys response if given arlys name or return all arlys when empty, default random chance 30 but chance for the arlys 
     can be changed after making it by using the chance augment, use of $ is allowed usage shown in commands</span>
     <span class="commented">#{youtube} DOES NOT work in arlys messages and will be removed!</span>
     <span class="commented">#{input} special case, it will be the last message sent in chat</span></pre>
       </div>
       <div class="outlines">
         <span>evolve [&lt;Pokémon name&gt; &lt;empty|abilities|moves|bmi|stats|type&gt;]|[damage &lt;pk type&gt;] <span class="commented">#leave empty to get evolution chain</span></span>
-        <pre>
-        <span class="commented">#augments</span>
+        <pre>        <span class="commented">#augments</span>
         &lt;Pokémon name&gt; <span class="commented">#everyone up</span>
             empty <span class="commented">     #gets evolution chain and Minimum Level(ML) to evolve</span>
             abilities <span class="commented"> #gets the abilities of the pokemon</span>
