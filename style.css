@@ -5,11 +5,15 @@ body {
 
 .flexdiv {
   background: #1F2227;
-
-  /* display: flex;
+  display: flex;
   flex-wrap: wrap;
-  position: absolute; */
+  position: absolute;
   color: white;
+}
+
+.docdiv {
+	background: #1F2227;
+	color: white;
 }
 
 .colorretate {
