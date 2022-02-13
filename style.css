@@ -11,6 +11,13 @@ body {
   color: white;
 }
 
+.header {
+  color: #ccc;
+  background: #2c323d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .content {
   color: white;
 }
