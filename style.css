@@ -4,6 +4,124 @@ body {
   margin: 0px;
 }
 
+.nav__container .nav__logo svg,
+.nav__container .nav__logo svg path {
+  height: 63px;
+  width: 87px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.nav__container .nav__logo {
+  flex: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding-left: 20px;
+  height: 32px;
+  width: 58px;
+}
+
+header .sidebar dl dt:not(.no-anchorlinks) a::before {
+  content: '›';
+  display: inline-block;
+  padding: 0 7px 0 0;
+  position: absolute;
+  left: 15px;
+}
+
+h1,
+h2 {
+  border-bottom: 1px solid #D9D9DE;
+}
+
+header .sidebar dl dt a {
+  transition: background 0.2s ease;
+  padding: 15px 15px 15px 30px;
+  display: block;
+  font-size: 1em;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* .algolia-autocomplete {
+  position: relative;
+  display: inline-block;
+  direction: ltr;
+} */
+
+.nav__container .nav__links a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.5;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.sidebar,
+.slide {
+  display: block !important;
+  width: 250px;
+}
+
+header .sidebar {
+  line-height: 1em;
+}
+
+header .sidebar dl {
+  border-bottom: 1px solid #D9D9DE;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__container .nav__links a:hover {
+  color: #000;
+}
+
+.nav__container .nav__links li {
+  padding: 0px 20px;
+  height: 50px;
+}
+
+.nav__container .nav__links {
+  height: 50px;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-start;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.nav__container {
+  background: #2c323d;
+  /* position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  z-index: 10;
+  font-size: 0.9rem;
+  line-height: 0;
+  height: 50px; */
+}
+
+.nav__container .container2 {
+  display: flex;
+}
+
 .flexdiv {
   background: #1F2227;
   display: flex;
@@ -12,11 +130,16 @@ body {
   color: white;
 }
 
-.header {
-  color: #ccc;
-  background: #2c323d;
-  padding-top: 20px;
-  padding-bottom: 20px;
+
+.slide .scroller {
+  max-height: calc(100vh - 107px);
+  overflow-y: auto;
+}
+
+.header .sidebar dl {
+  border-bottom: 1px solid #D9D9DE;
+  padding: 0px;
+  margin: 0px;
 }
 
 .content {
@@ -26,6 +149,7 @@ body {
 .docdiv {
   background: #1F2227;
   color: white;
+  /* margin: 0 0 0 250px; */
 }
 
 .colorretate {
