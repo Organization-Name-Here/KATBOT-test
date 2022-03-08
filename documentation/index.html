@@ -305,72 +305,90 @@
 
         <h2><span>commands</span></h2>
         <ul>
-          <ul>
-            <li><span>touch</span></li>
-            <li><span>me &lt;x&gt; <span class="commented">#uses /me command as KATBOT</span></span></li>
-            <li><span>8ball &lt;x&gt; <span class="commented">#ask the magic 8ball a question</span></span></li>
-            <li><span>______</span></li>
-            <li><span>botrespond</span></li>
-            <li><span>roll [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[&lt;x&gt; &lt;empty&gt;]<span class="see-vertical-bar">|</span>[&lt;x&gt; d&lt;y&gt;] <span class="commented">#rolls a die if left empty or a amount of 6 side dice if given number or a amount of up to 20 d20s if given number then d then number</span></span></li>
-            <li><span>maiq <span class="commented">#gives you a quote from M'aiq</span></span></li>
-            <li><span>____</span></li>
-            <li><span>joke &lt;empty&gt;<span class="see-vertical-bar">|</span>[api &lt;id of joke&gt;] <span class="commented">#tell you a joke api &lt;id of joke&gt; #gets joke from given id from <a href="https://icanhazdadjoke.com/">https://icanhazdadjoke.com</a></span></span></li>
-            <li><span>rotface 'Hey buddy, spare a cap?'</span></li>
-            <li><span>suzy "&lt;x&gt;" "&lt;y&gt;" "&lt;z&gt;"</span></li>
-            <li><span>didnt &lt;viewer<span class="see-vertical-bar">|</span>empty&gt;<span class="see-vertical-bar">|</span>&lt;viewer&gt; &lt;another viewer<span class="see-vertical-bar">|</span>empty&gt;</span></li>
-            <li><span>flipcoin</span></li>
-            <li><span>maze</span></li>
-            <li><span>xkcd &lt;empty&gt;<span class="see-vertical-bar">|</span>&lt;comic number&gt; <span class="commented">#returns random xkcd comic or Gets the XKCD comic based on number</span></span></li>
-            <li><span>portal o|n x&lt;coordinate&gt; z&lt;coordinate&gt; <span class="commented">#input n/o x z coordinates to get returned n/o not inputted portal placement coordinates (e.g. if n input then o output)</span></span></li>
-            <li><span>quote &lt;empty&gt;<span class="see-vertical-bar">|</span>&lt;index&gt;<span class="see-vertical-bar">|</span>[add<span class="see-vertical-bar">|</span>remove &lt;x&gt;] <span class="commented">#empty gives quote, index gives given quote in that index</span></span></li>
-            <li><span>iconic <span class="commented">#some quotes I've collected</span></span></li>
-            <li><span>rip -&lt;x&gt;<span class="see-vertical-bar">|</span>[&lt;_____<span class="see-vertical-bar">|</span>count<span class="see-vertical-bar">|</span>reset<span class="see-vertical-bar">|</span>empty&gt;] <span class="commented">#add death to broadcaster if left empty, remove death if given - then number(no space) resend can give count</span></span></li>
-            <li><span>use &lt;viewer&gt;<span class="see-vertical-bar">|</span>&lt;empty&gt; <span class="commented">#use a attack move from Pokemon</span></span></li>
-            <li><span>math &lt;number&gt; +<span class="see-vertical-bar">|</span>-<span class="see-vertical-bar">|</span>*<span class="see-vertical-bar">|</span>**<span class="see-vertical-bar">|</span>/<span class="see-vertical-bar">|</span>// &lt;number&gt; <span class="commented">#able to do complex math +, –, *, ** (Power), / Division (float), // Division (floor) % Modulus: returns the remainder when first operand is divided by the second x % y</span></span></li>
-            <li><span>echo &lt;x&gt; <span class="commented">#makes KATBOT say what ever is after "echo "</span></span></li>
-            <li><span>house &lt;x<span class="see-vertical-bar">|</span>empty&gt; <span class="commented">#He kneels before no banner, owes allegiance to no Kell.</span></span></li>
-            <li><span>viewers <span class="commented">#gets viewer count</span></span>
+          <li><span>touch</span></li>
+          <li><span>me &lt;x&gt; <span class="commented">#uses /me command as KATBOT</span></span></li>
+          <li><span>8ball &lt;x&gt; <span class="commented">#ask the magic 8ball a question</span></span></li>
+          <li><span>______</span></li>
+          <li><span>botrespond</span></li>
+          <li><span>roll [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[&lt;x&gt; &lt;empty&gt;]<span class="see-vertical-bar">|</span>[&lt;x&gt; d&lt;y&gt;] <span class="commented">#rolls a die if left empty or a amount of 6 side dice if given number or a amount of up to 20 d20s if given number then d then number</span></span></li>
+          <li><span>maiq <span class="commented">#gives you a quote from M'aiq</span></span></li>
+          <li><span>____</span></li>
+          <li><span>joke &lt;empty&gt;<span class="see-vertical-bar">|</span>[api &lt;id of joke&gt;] <span class="commented">#tell you a joke api &lt;id of joke&gt; #gets joke from given id from <a href="https://icanhazdadjoke.com/">https://icanhazdadjoke.com</a></span></span></li>
+          <li><span>rotface 'Hey buddy, spare a cap?'</span></li>
+          <li><span>suzy "&lt;x&gt;" "&lt;y&gt;" "&lt;z&gt;"</span></li>
+          <li><span>didnt &lt;viewer<span class="see-vertical-bar">|</span>empty&gt;<span class="see-vertical-bar">|</span>&lt;viewer&gt; &lt;another viewer<span class="see-vertical-bar">|</span>empty&gt;</span></li>
+          <li><span>flipcoin</span></li>
+          <li>
+            <span>maze</span>
+            <ul>
+              <li><span class="commented">#augments</span></li>
+              <li>
+                <span>help <span class="commented">#get more information on given augment usage</span></span>
+                <ul>
+                  <li><span>help &lt;augment_name&gt;</span></li>
+                </ul>
+              </li>
+              <li><span>start <span class="commented">#loads in settings from settings augment</span></span></li>
+
+              <li><span>settings <span class="commented">#set settings before starting maze</span></span></li>
               <ul>
-                <li><span class="commented">#augments</span></li>
-                <li><span class="none">None</span> <span class="commented">#everyone up</span></li>
+                <li><span class="commented">#default pixels=20, size=12, tailing=False, tailcolor=blue, playcolor=green, exitcolor=red, wallcolor=black, mazecolor=white</span></li>
+                <li><span>settings({'NameofSetting':'value',comma between each one if there is more than one})</span></li>
               </ul>
-            </li>
-            <li><span>chatters <span class="commented">#gets current amount of users connected to chat</span></span>
-              <ul>
-                <li><span class="commented">#augments</span></li>
-                <li><span class="none">None</span> <span class="commented">#everyone up</span></li>
-              </ul>
-            </li>
-            <li><span>uptime <span class="commented">#get how long the stream has been live</span></span></li>
-            <li><span>#&lt;channel name&gt;/&lt;command name&gt; <span class="commented">##use a custom command from another channel to clarify / does not mean one or the other</span></span>
-              <ul>
-                <li><span class="commented">#augments</span></li>
-                <li><span class="none">None</span> <span class="commented">#mods up</span></li>
-              </ul>
-            </li>
-            <li><span>test</span></li>
-            <li><span>permit &lt;viewer&gt; <span class="commented">#allows a non mod/vip/sub to post one link</span></span></li>
-            <li><span>exit</span></li>
-            <li><span>about</span></li>
-            <li><span>supportlink</span></li>
-            <li><span>title &lt;x&gt;<span class="see-vertical-bar">|</span>&lt;empty&gt; <span class="commented">#changes title or leave empty to current title</span></span>
-              <ul>
-                <li><span class="commented">#augments</span></li>
-                <li><span>&lt;x&gt; <span class="commented">#mods up #changes title to &lt;x&gt;</span></span></li>
-                <li><span>&lt;empty&gt; <span class="commented">#everyone up #gets current title</span></span></li>
-              </ul>
-            </li>
-            <li><span>game &lt;x&gt;<span class="see-vertical-bar">|</span>&lt;empty&gt; <span class="commented">#changes game or leave empty to current game</span></span>
-              <ul>
-                <li><span class="commented">#augments</span></li>
-                <li><span>&lt;x&gt; <span class="commented">#mods up #changes gmae to &lt;x&gt;</span></span></li>
-                <li><span>&lt;empty&gt; <span class="commented">#everyone up #gets current game</span></span></li>
-              </ul>
-            </li>
-            <li><span>searchgame &lt;x&gt; <span class="commented">#game look up</span></span></li>
-            <li><span>access &lt;command name&gt; [mod<span class="see-vertical-bar">|</span>vip<span class="see-vertical-bar">|</span>sub<span class="see-vertical-bar">|</span>eve true<span class="see-vertical-bar">|</span>false]|[user add<span class="see-vertical-bar">|</span>remove &lt;viewer&gt;] <span class="commented">#change what level of viewer can access the given command can also limit a command to a specific user(does not include creator or broadcaster)</span></span></li>
-            <li><span>followage &lt;viewer&gt; &lt;empty&gt;<span class="see-vertical-bar">|</span>stats <span class="commented">#gets how long a user or yourself has been following the broadcaster</span></span></li>
-          </ul>
+              <li><span>move <span class="commented">#makes player move in maze</span></span></li>
+              <li><span>end <span class="commented">#stops maze</span></span></li>
+            </ul>
+          </li>
+          <li><span>xkcd &lt;empty&gt;<span class="see-vertical-bar">|</span>&lt;comic number&gt; <span class="commented">#returns random xkcd comic or Gets the XKCD comic based on number</span></span></li>
+          <li><span>portal o|n x&lt;coordinate&gt; z&lt;coordinate&gt; <span class="commented">#input n/o x z coordinates to get returned n/o not inputted portal placement coordinates (e.g. if n input then o output)</span></span></li>
+          <li><span>quote &lt;empty&gt;<span class="see-vertical-bar">|</span>&lt;index&gt;<span class="see-vertical-bar">|</span>[add<span class="see-vertical-bar">|</span>remove &lt;x&gt;] <span class="commented">#empty gives quote, index gives given quote in that index</span></span></li>
+          <li><span>iconic <span class="commented">#some quotes I've collected</span></span></li>
+          <li><span>rip -&lt;x&gt;<span class="see-vertical-bar">|</span>[&lt;_____<span class="see-vertical-bar">|</span>count<span class="see-vertical-bar">|</span>reset<span class="see-vertical-bar">|</span>empty&gt;] <span class="commented">#add death to broadcaster if left empty, remove death if given - then number(no space) resend can give count</span></span></li>
+          <li><span>use &lt;viewer&gt;<span class="see-vertical-bar">|</span>&lt;empty&gt; <span class="commented">#use a attack move from Pokemon</span></span></li>
+          <li><span>math &lt;number&gt; +<span class="see-vertical-bar">|</span>-<span class="see-vertical-bar">|</span>*<span class="see-vertical-bar">|</span>**<span class="see-vertical-bar">|</span>/<span class="see-vertical-bar">|</span>// &lt;number&gt; <span class="commented">#able to do complex math +, –, *, ** (Power), / Division (float), // Division (floor) % Modulus: returns the remainder when first operand is divided by the second x % y</span></span></li>
+          <li><span>echo &lt;x&gt; <span class="commented">#makes KATBOT say what ever is after "echo "</span></span></li>
+          <li><span>house &lt;x<span class="see-vertical-bar">|</span>empty&gt; <span class="commented">#He kneels before no banner, owes allegiance to no Kell.</span></span></li>
+          <li><span>viewers <span class="commented">#gets viewer count</span></span>
+            <ul>
+              <li><span class="commented">#augments</span></li>
+              <li><span class="none">None</span> <span class="commented">#everyone up</span></li>
+            </ul>
+          </li>
+          <li><span>chatters <span class="commented">#gets current amount of users connected to chat</span></span>
+            <ul>
+              <li><span class="commented">#augments</span></li>
+              <li><span class="none">None</span> <span class="commented">#everyone up</span></li>
+            </ul>
+          </li>
+          <li><span>uptime <span class="commented">#get how long the stream has been live</span></span></li>
+          <li><span>#&lt;channel name&gt;/&lt;command name&gt; <span class="commented">##use a custom command from another channel to clarify / does not mean one or the other</span></span>
+            <ul>
+              <li><span class="commented">#augments</span></li>
+              <li><span class="none">None</span> <span class="commented">#mods up</span></li>
+            </ul>
+          </li>
+          <li><span>test</span></li>
+          <li><span>permit &lt;viewer&gt; <span class="commented">#allows a non mod/vip/sub to post one link</span></span></li>
+          <li><span>exit</span></li>
+          <li><span>about</span></li>
+          <li><span>supportlink</span></li>
+          <li><span>title &lt;x&gt;<span class="see-vertical-bar">|</span>&lt;empty&gt; <span class="commented">#changes title or leave empty to current title</span></span>
+            <ul>
+              <li><span class="commented">#augments</span></li>
+              <li><span>&lt;x&gt; <span class="commented">#mods up #changes title to &lt;x&gt;</span></span></li>
+              <li><span>&lt;empty&gt; <span class="commented">#everyone up #gets current title</span></span></li>
+            </ul>
+          </li>
+          <li><span>game &lt;x&gt;<span class="see-vertical-bar">|</span>&lt;empty&gt; <span class="commented">#changes game or leave empty to current game</span></span>
+            <ul>
+              <li><span class="commented">#augments</span></li>
+              <li><span>&lt;x&gt; <span class="commented">#mods up #changes gmae to &lt;x&gt;</span></span></li>
+              <li><span>&lt;empty&gt; <span class="commented">#everyone up #gets current game</span></span></li>
+            </ul>
+          </li>
+          <li><span>searchgame &lt;x&gt; <span class="commented">#game look up</span></span></li>
+          <li><span>access &lt;command name&gt; [mod<span class="see-vertical-bar">|</span>vip<span class="see-vertical-bar">|</span>sub<span class="see-vertical-bar">|</span>eve true<span class="see-vertical-bar">|</span>false]|[user add<span class="see-vertical-bar">|</span>remove &lt;viewer&gt;] <span class="commented">#change what level of viewer can access the given command can also limit a command to a specific user(does not include creator or broadcaster)</span></span></li>
+          <li><span>followage &lt;viewer&gt; &lt;empty&gt;<span class="see-vertical-bar">|</span>stats <span class="commented">#gets how long a user or yourself has been following the broadcaster</span></span></li>
           <li><span>localvars add<span class="see-vertical-bar">|</span>edit<span class="see-vertical-bar">|</span>&lt;empty&gt; &lt;local var name&gt; [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[<span class="warning">(only with add|edit)</span>&lt;x&gt; &lt;y&gt;]<span class="see-vertical-bar">|</span>[remove &lt;x&gt;] <span class="commented">#add/modify or remove a local variable(LV)(used in code) or return LV response given LV name or return all LVs when empty</span></span>
             <ul>
               <li><span class="commented">#examble</span>
