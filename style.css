@@ -4,15 +4,15 @@ body {
   margin: 0px;
 }
 
-.nav__container .nav__logo svg,
-.nav__container .nav__logo svg path {
+#header .nav__logo svg,
+#header .nav__logo svg path {
   height: 63px;
   width: 87px;
   margin-top: 28px;
   margin-bottom: 10px;
 }
 
-.nav__container .nav__logo {
+#header .nav__logo {
   flex: 0;
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@ body {
   width: 58px;
 }
 
-header .sidebar dl dt:not(.no-anchorlinks) a::before {
+#header .sidebar dl dt:not(.no-anchorlinks) a::before {
   content: '›';
   display: inline-block;
   padding: 0 7px 0 0;
@@ -31,12 +31,11 @@ header .sidebar dl dt:not(.no-anchorlinks) a::before {
   left: 15px;
 }
 
-h1,
 h2 {
   border-bottom: 1px solid #D9D9DE;
 }
 
-header .sidebar dl dt a {
+#header .sidebar dl dt a {
   transition: background 0.2s ease;
   padding: 15px 15px 15px 30px;
   display: block;
@@ -53,7 +52,7 @@ header .sidebar dl dt a {
   direction: ltr;
 } */
 
-.nav__container .nav__links a {
+#header .nav__links a {
   color: #fff;
   text-decoration: none;
   line-height: 1.5;
@@ -71,26 +70,26 @@ header .sidebar dl dt a {
   width: 250px;
 }
 
-header .sidebar {
+#header .sidebar {
   line-height: 1em;
 }
 
-header .sidebar dl {
+#header .sidebar dl {
   border-bottom: 1px solid #D9D9DE;
   padding: 0;
   margin: 0;
 }
 
-.nav__container .nav__links a:hover {
+#header .nav__links a:hover {
   color: #000;
 }
 
-.nav__container .nav__links li {
+#header .nav__links li {
   padding: 0px 20px;
   height: 50px;
 }
 
-.nav__container .nav__links {
+#header .nav__links {
   height: 50px;
   list-style: none;
   padding: 0;
@@ -105,7 +104,7 @@ header .sidebar dl {
   font-size: 14px;
 }
 
-.nav__container {
+#header {
   background: #2c323d;
   /* position: relative;
   top: 0;
@@ -118,7 +117,7 @@ header .sidebar dl {
   height: 50px; */
 }
 
-.nav__container .container2 {
+#header .container2 {
   display: flex;
 }
 
@@ -136,7 +135,7 @@ header .sidebar dl {
   overflow-y: auto;
 }
 
-.header .sidebar dl {
+#header .sidebar dl {
   border-bottom: 1px solid #D9D9DE;
   padding: 0px;
   margin: 0px;
@@ -149,7 +148,8 @@ header .sidebar dl {
 .docdiv {
   background: #1F2227;
   color: white;
-  /* margin: 0 0 0 250px; */
+  /*! margin: 0 0 0 250px; */
+  overflow-y: auto;
 }
 
 .colorretate {
@@ -303,4 +303,34 @@ header .sidebar dl {
   padding-left: 0.5em;
   padding-right: 0.5em;
   color: white;
+}
+
+.grid {
+  min-height: calc(100vh - ( 4rem - .75rem ) );
+  max-height: calc(100vh - ( 4rem - .75rem ) );
+  height: calc(100vh - ( 4rem - 0.75rem ) );
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  margin-bottom: 0;
+}
+#sidebar a {
+	color: #fff;
+}
+.menu-label {
+	color: #fff;
+  text-transform: uppercase;
+}
+.sidebar a.is-active {
+	background-color: #1abc9c;
+}
+#sidebar{
+	/*! width: 20em; */
+	/*! overflow-y: auto; */
+}
+.sidebar a {
+	transition: all 300ms ease;
+}
+.title {
+  font-size: 2rem;
 }
