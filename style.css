@@ -312,6 +312,7 @@ body {
 
 .sidebar a.is-active {
   background-color: #00ad81;
+  text-decoration: underline !important;
 }
 
 #sidebar {
@@ -329,7 +330,8 @@ body {
 
 #sidebar a {
   color: #fff;
-  transition: all 300ms cubic-bezier(1,1.18,0,-0.16);
+  transition: all 300ms cubic-bezier(1, 1.18, 0, -0.16);
+  text-decoration: unset;
 }
 
 .title {
