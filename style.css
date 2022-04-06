@@ -320,7 +320,7 @@ body {
   overflow-y: auto;
 }
 
-.menu-list a {
+.menu-item a {
   border-radius: 3px;
   color: #fff;
   display: block;
@@ -329,7 +329,7 @@ body {
 
 #sidebar a {
   color: #fff;
-  transition: all 300ms ease;
+  transition: all 300ms cubic-bezier(1,1.18,0,-0.16);
 }
 
 .title {
