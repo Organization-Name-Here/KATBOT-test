@@ -31,10 +31,6 @@ body {
   left: 15px;
 }
 
-h2 {
-  border-bottom: 1px solid #D9D9DE;
-}
-
 #header .sidebar dl dt a {
   transition: background 0.2s ease;
   padding: 15px 15px 15px 30px;
@@ -306,31 +302,41 @@ h2 {
 }
 
 .grid {
-  min-height: calc(100vh - ( 4rem - .75rem ) );
-  max-height: calc(100vh - ( 4rem - .75rem ) );
-  height: calc(100vh - ( 4rem - 0.75rem ) );
+  min-height: calc(100vh - (4rem - .75rem));
+  max-height: calc(100vh - (4rem - .75rem));
+  height: calc(100vh - (4rem - 0.75rem));
   display: flex;
   flex-direction: row;
   justify-content: stretch;
   margin-bottom: 0;
 }
+
 #sidebar a {
-	color: #fff;
+  color: #fff;
 }
+
 .menu-label {
-	color: #fff;
+  color: #fff;
   text-transform: uppercase;
 }
+
 .sidebar a.is-active {
-	background-color: #1abc9c;
+  background-color: #1abc9c;
 }
-#sidebar{
-	/*! width: 20em; */
-	/*! overflow-y: auto; */
+
+#sidebar {
+  /*! width: 20em; */
+  /*! overflow-y: auto; */
 }
+
 .sidebar a {
-	transition: all 300ms ease;
+  transition: all 300ms ease;
 }
+
 .title {
   font-size: 2rem;
+}
+
+nav li {
+  list-style: none;
 }
