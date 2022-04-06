@@ -305,7 +305,7 @@ body {
   margin-bottom: 0;
 }
 
-.menu-label {
+.label {
   color: #fff;
   text-transform: uppercase;
 }
@@ -320,7 +320,7 @@ body {
   overflow-y: auto;
 }
 
-.menu-item a {
+.item a {
   border-radius: 3px;
   color: #fff;
   display: block;
