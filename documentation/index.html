@@ -4,35 +4,6 @@
     <title>KATCBOT interface</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../style.css">
-    <script>
-      function start() {
-        document.addEventListener("gumshoeActivate", function(event) {
-          event.target.childNodes[0].className = "is-active"
-        }, false);
-        document.addEventListener("gumshoeDeactivate", function(event) {
-          event.target.childNodes[0].className = ""
-        }, false);
-
-        var header = document.querySelector("#header");
-        spy = new Gumshoe("#sidebar a", {
-          navClass: "is-active",
-          contentClass: "is-active",
-          offset: function() {
-            return header.getBoundingClientRect().height;
-          },
-          events: true
-        });
-
-        spy.setup();
-        spy.detect();
-
-        document.getElementById("main").addEventListener('scroll', function() {
-          spy.detect();
-        });
-      }
-      start()
-
-    </script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe@5.1.1/dist/gumshoe.js"></script>
   </head>
 
@@ -510,6 +481,35 @@
         </ul>
       </div>
     </div>
+    <script>
+      function start() {
+        document.addEventListener("gumshoeActivate", function(event) {
+          event.target.childNodes[0].className = "is-active"
+        }, false);
+        document.addEventListener("gumshoeDeactivate", function(event) {
+          event.target.childNodes[0].className = ""
+        }, false);
+
+        var header = document.querySelector("#header");
+        spy = new Gumshoe("#sidebar a", {
+          navClass: "is-active",
+          contentClass: "is-active",
+          offset: function() {
+            return header.getBoundingClientRect().height;
+          },
+          events: true
+        });
+
+        spy.setup();
+        spy.detect();
+
+        document.getElementById("main").addEventListener('scroll', function() {
+          spy.detect();
+        });
+      }
+      start()
+
+    </script>
   </body>
 
 </html>
