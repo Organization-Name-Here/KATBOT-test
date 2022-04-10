@@ -390,49 +390,79 @@
         </section>
         <hr>
         <section id="autoreplies" class="">
-          <h2>Auto replies</h2>
-          <span>add/modify or remove a auto replay or return auto replies response if given auto replay name or return all auto replies when empty</span><br><span>default random chance 30 but chance for the auto replies it can be changed after making it by using the chance augment</span><br>
-          <ul>
+          <div>
+            <h2>Auto replies</h2><span>add/modify or remove a auto replay or return auto replies response if given auto replay name or return all auto replies when empty</span><br><span>default random chance 30 but chance for the auto replies it can be changed after making it by using the chance augment</span>
+          </div>
+          <div>
             <li><span>autoreply add</span>
             </li>
-            <ul>
-              <div><span>creates a auto reply with a random chance of "every one in 30"</span>
-                <li><code>autoreply add &lt;autoreply name&gt; &lt;response&gt;</code></li>
-                <ul>
-                  <li>
-                    <span>example:</span>
-                    <code>autoreply add error a error has occurred</code>
-                    <span> - Adds auto reply called "error"</span>
-                  </li>
-                </ul>
-              </div>
+            <ul><span>creates a auto reply with a random chance of "every one in 30"</span>
+              <li><code>autoreply add &lt;autoreply name&gt; &lt;response&gt;</code></li>
+              <ul>
+                <li>
+                  <span>example:</span>
+                  <code>autoreply add error a error has occurred</code>
+                  <span> - Adds auto reply called "error"</span>
+                </li>
+              </ul>
             </ul>
+          </div>
+          <div>
             <li><span>autoreply edit</span>
             </li>
             <ul>
-              <div><span>edits a given auto reply</span>
-                <li><code>autoreply edit &lt;autoreply name<span class="see-vertical-bar">|</span>key<span class="warning">(it edits the name of the command)</span>&gt; &lt;response&gt;</code></li>
+              <span>edits a given auto reply</span>
+              <ul>
+                <li><span class="notice_me">default</span></li>
                 <ul>
                   <li>
-                    <span>example:</span>
-                    <code>autoreply edit error this might be a error you should check</code>
-                    <span> - edits autoreply "error" to "this might be a error you should check"</span>
-                  </li>
-                  <li>
-                    <span>example:</span>
-                    <code>autoreply edit error chance 60</code>
-                    <span> - edits autoreply "error" random chance to 60</span>
+                    <span>firsttimechattergreeting</span>
+                    <span class="commented">#first time chatter greeting</span>
+                    <br>
+                    <span title="(its long I know...)">it CAN NOT BE DELETED but the chance and message can be changed</span><br><span>send a message when its a viewers first time chatting</span>
+                    <table>
+                      <tbody>
+                        <tr class="tr_title ">
+                          <th>aug</th>
+                          <th>default</th>
+                        </tr>
+                        <tr>
+                          <th><span class="none">active</span></th>
+                          <th>false</th>
+                        </tr>
+                        <tr>
+                          <th><span class="none">message</span></th>
+                          <th>$welcome @{user} be sure to read the {prefix}rules</th>
+                        </tr>
+                      </tbody>
+                    </table>
                   </li>
                 </ul>
-              </div>
+                <ul></ul>
+              </ul>
+              <li><code>autoreply edit &lt;autoreply name<span class="see-vertical-bar">|</span>key<span class="warning">(it edits the name of the command)</span>&gt; &lt;response&gt;</code></li>
+              <ul>
+                <li>
+                  <span>example:</span>
+                  <code>autoreply edit error this might be a error you should check</code>
+                  <span> - edits autoreply "error" to "this might be a error you should check"</span>
+                </li>
+                <li>
+                  <span>example:</span>
+                  <code>autoreply edit error chance 60</code>
+                  <span> - edits autoreply "error" random chance to 60</span>
+                </li>
+              </ul>
             </ul>
+          </div>
+          <div>
             <li><span>autoreply remove</span>
             </li>
             <ul>
               <span>removes given auto reply</span>
               <li><code>autoreply remove &lt;autoreply name&gt;</code></li>
             </ul>
-          </ul>
+          </div>
         </section>
         <hr>
         <section id="variables" class="">
@@ -449,6 +479,23 @@
               </ul>
             </li>
             <!--<li>localvars add<span class="see-vertical-bar">|</span>edit<span class="see-vertical-bar">|</span>&lt;empty&gt; &lt;local var name&gt; [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[<span class="warning">(only with add<span class="see-vertical-bar">|</span>edit)</span>&lt;x&gt; &lt;y&gt;]<span class="see-vertical-bar">|</span>[remove &lt;x&gt;]</li>-->
+            <li><span>localvars &lt;var name&gt;</span>
+            </li>
+            <ul><span>shows all avaible </span><span>shows all available vars</span>
+              <li>
+                <span>example:</span>
+                <code>localvars &lt;var name&gt;</code>
+              </li>
+            </ul>
+            <li>
+              <div><span>localvars &lt;var name&gt; &lt;active</span><span class="see-vertical-bar">|</span><span>message</span><span class="see-vertical-bar">|</span><span>reason</span><span class="see-vertical-bar">|</span><span>punishment</span><span class="see-vertical-bar">|</span><span>fail&gt;</span></div>
+            </li>
+            <ul><span>return value of aug for given var</span>
+              <li>
+                <span>example:</span>
+                <code>localvars &lt;var name&gt;</code>
+              </li>
+            </ul>
             <li><span>localvars add</span>
             </li>
             <ul>
@@ -481,7 +528,7 @@
             </li>
             <ul>
               <span>removes given var</span>
-              <li><span>example:</span><code>autoreply remove &lt;autoreply name&gt;</code></li>
+              <li><span>example:</span><code>localvars remove &lt;var name&gt;</code></li>
             </ul>
           </ul>
           <ul>
@@ -532,26 +579,6 @@
                     <tr>
                       <th><span class="none">timeoutamount</span></th>
                       <th>300</th>
-                    </tr>
-                  </tbody>
-                </table>
-              </li>
-              <li>
-                <span>firsttimechattergreeting</span>
-                <span class="commented"><span title="(its long I know...)">#first time chatter greeting</span></span>
-                <table>
-                  <tbody>
-                    <tr class="tr_title ">
-                      <th>aug</th>
-                      <th>default</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">active</span></th>
-                      <th>false</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">message</span></th>
-                      <th>$welcome @{user} be sure to read the {prefix}rules</th>
                     </tr>
                   </tbody>
                 </table>
@@ -806,7 +833,6 @@
         <section id="repeating messages" class="">
           <h2>Repeating messages</h2>
           <span>add/modify or remove a repeating message or return repeating message response if given repeating messages name or return all repeating messages when empty, default repeat time is 30 minutes</span><br>
-
           <ul>
             <!--<li><span>repeatmsg add<span class="see-vertical-bar">|</span>edit<span class="see-vertical-bar">|</span>&lt;empty&gt; &lt;repeating msg name&gt; [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[(only with add<span class="see-vertical-bar">|</span>edit)&lt;time<span class="see-vertical-bar">|</span>delay<span class="see-vertical-bar">|</span>empty&gt; &lt;x&gt;]<span class="see-vertical-bar">|</span>[remove &lt;x&gt;]</span>
 </li>-->
@@ -891,7 +917,7 @@
             <li><span>me &lt;x&gt; <span class="commented">#uses /me command as KATBOT</span></span></li>
             <li><span>8ball &lt;x&gt; <span class="commented">#ask the magic 8ball a question</span></span></li>
             <li><span>roll [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[&lt;x&gt; &lt;empty&gt;]<span class="see-vertical-bar">|</span>[&lt;x&gt; d&lt;y&gt;] <span class="commented">#rolls a die if left empty or a amount of 6 side dice if given number or a amount of up to 20 d20s if given number then d then number</span></span></li>
-            <li><span>joke &lt;empty&gt;<span class="see-vertical-bar">|</span>[api &lt;id of joke&gt;] <span class="commented">#tell you a joke api &lt;id of joke&gt; #gets joke from given id from <a href="https://icanhazdadjoke.com/">https://icanhazdadjoke.com</a></span></span></li>
+            <li><span>joke &lt;empty&gt;<span class="see-vertical-bar">|</span>[api &lt;id of joke&gt;] <span class="commented">#tell you a joke api &lt;id of joke&gt; #gets joke from given id from <a href="https://icanhazdadjoke.com/">i can haz dad joke</a></span></span></li>
             <li><span>suzy "&lt;x&gt;" "&lt;y&gt;" "&lt;z&gt;"</span></li>
             <li><span>flipcoin</span></li>
             <li>
@@ -1099,11 +1125,78 @@
             <li><span>followage &lt;viewer&gt; &lt;empty&gt;<span class="see-vertical-bar">|</span>stats <span class="commented">#gets how long a user or yourself has been following the broadcaster</span></span></li>
             <li><span>color &lt;color name&gt; &lt;y&gt; #make my console light up, makes the given message colored in console</span></li>
             <ul>
-              <li><span class="commented">b = background, f = foreground</span></li>
-              <li><span>available colors; "b light black", "<span style="color:black; background: lightblue;">b light blue</span>", "<span style="color:black; background: lightgreen;">b light green</span>", "<span style="color:black; background: lightcyan;">b light cyan</span>", "<span style="background: #ff3535;">b light red</span>", "<span style="background: #ff35ff;">b light magenta</span>", "<span style="color:black; background: lightyellow;">b light yellow</span>",</span>
-                <span>"b light white", "<span style="color: white; background:black;">b black</span>", "<span style="background:blue;">b blue</span>", "<span style="background:green;">b green</span>", "<span style="color:black; background:cyan;">b cyan</span>", "<span style="background:red;">b red</span>", "<span style="background:magenta;">b magenta</span>", "<span style="color:black; background:yellow;">b yellow</span>", "<span style="color:black; background:white;">b white</span>", "f light black",</span>
-                <span>"<span style="color: lightblue;">f light blue</span>", "<span style="color: lightgreen;">f light green</span>", "<span style="color: lightcyan;">f light cyan</span>", "<span style="color: #ff3535;">f light red</span>", "<span style="color: #ff35ff;">f light magenta</span>", "<span style="color: lightyellow;">f light yellow</span>", "f light white",</span>
-                <span>"f black", "<span style="color: blue;">f blue</span>", "<span style="color: green;">f green</span>", "<span style="color: cyan;">f cyan</span>", "<span style="color: red;">f red</span>", "<span style="color: magenta;">f magenta</span>", "<span style="color: yellow;">f yellow</span>", "<span style="color:white;">f white</span>"</span></li>
+              <table>
+                <tbody>
+                  <tr class="tr_title">
+                    <th>b = background</th>
+                    <th>f = foreground</th>
+                  </tr>
+                  <tr>
+                    <th>b light black</th>
+                    <th>f light black</th>
+                  </tr>
+                  <tr>
+                    <th style="color:black; background: lightblue;">b light blue</th>
+                    <th style="color: lightblue;">f light blue</th>
+                  </tr>
+                  <tr>
+                    <th style="color:black; background: lightgreen;">b light green</th>
+                    <th style="color: lightgreen;">f light green</th>
+                  </tr>
+                  <tr>
+                    <th style="color:black; background: lightcyan;">b light cyan</th>
+                    <th style="color: lightcyan;">f light cyan</th>
+                  </tr>
+                  <tr>
+                    <th style="background: #ff3535;">b light red</th>
+                    <th style="color: #ff3535;">f light red</th>
+                  </tr>
+                  <tr>
+                    <th style="background: #ff35ff;">b light magenta</th>
+                    <th style="color: #ff35ff;">f light magenta</th>
+                  </tr>
+                  <tr>
+                    <th style="color:black; background: lightyellow;">b light yellow</th>
+                    <th style="color: lightyellow;">f light yellow</th>
+                  </tr>
+                  <tr>
+                    <th>b light white</th>
+                    <th>f light white</th>
+                  </tr>
+                  <tr>
+                    <th style="color: white; background:black;">b black</th>
+                    <th>f black</th>
+                  </tr>
+                  <tr>
+                    <th style="background:blue;">b blue</th>
+                    <th style="color: blue;">f blue</th>
+                  </tr>
+                  <tr>
+                    <th style="background:green;">b green</th>
+                    <th style="color: green;">f green</th>
+                  </tr>
+                  <tr>
+                    <th style="color:black; background:cyan;">b cyan</th>
+                    <th style="color: cyan;">f cyan</th>
+                  </tr>
+                  <tr>
+                    <th style="background:red;">b red</th>
+                    <th style="color: red;">f red</th>
+                  </tr>
+                  <tr>
+                    <th style="background:magenta;">b magenta</th>
+                    <th style="color: magenta;">f magenta</th>
+                  </tr>
+                  <tr>
+                    <th style="color:black; background:yellow;">b yellow</th>
+                    <th style="color: yellow;">f yellow</th>
+                  </tr>
+                  <tr>
+                    <th style="color:black; background:white;">b white</th>
+                    <th style="color:white;">f white</th>
+                  </tr>
+                </tbody>
+              </table>
             </ul>
             <li><span>evolve [&lt;Pokémon name&gt; &lt;empty<span class="see-vertical-bar">|</span>abilities<span class="see-vertical-bar">|</span>moves<span class="see-vertical-bar">|</span>bmi<span class="see-vertical-bar">|</span>stats<span class="see-vertical-bar">|</span>type&gt;]<span class="see-vertical-bar">|</span>[damage &lt;pk type&gt;] <span class="commented">#leave empty to get evolution chain</span></span>
               <ul>
