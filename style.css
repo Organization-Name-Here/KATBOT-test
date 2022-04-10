@@ -323,14 +323,14 @@ nav li {
   text-transform: uppercase;
 }
 
-.sidebar a.is-active {
+.sidebar a.highlighted {
   background-color: #ff6000;
   text-decoration: underline !important;
 }
 
 #sidebar {
   padding: 2.5rem;
-  width: 20em;
+  width: 15em;
   overflow-y: auto;
 }
 
