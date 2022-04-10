@@ -1,7 +1,7 @@
 body {
   background: #1F2227;
   font-family: Calibri, sans-serif;
-  color: #c6c6c6;
+  color: white;
   margin: 0px;
 }
 
@@ -322,7 +322,7 @@ nav li {
   text-transform: uppercase;
 }
 
-.sidebar a.highlighted {
+.sidebar a.is-active {
   background-color: #ff6000;
   text-decoration: underline !important;
 }
@@ -355,12 +355,12 @@ th {
   border: 1px solid #ccc;
 }
 
-.tr_code {
-  background: rgba(51, 51, 51, 0.5);
-  color: white;
-}
 code {
   background: #333;
   color: #fff;
   border-radius: 4px;
+}
+
+.notic_me {
+  font-size: 20px;
 }
