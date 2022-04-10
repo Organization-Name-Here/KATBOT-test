@@ -4,6 +4,7 @@
     <title>KATCBOT interface</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../style.css">
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe@5.1.1/dist/gumshoe.js"></script>
   </head>
 
@@ -1030,6 +1031,24 @@
                 <th><code>{input}</code></th>
                 <th><span>make command only work with a input from a user (eg CommandName UserInput)</span></th>
               </tr>
+              <tr>
+                <th><code>{datetime()}</code></th>
+                <th>
+                  <div>
+                    <span>adds EST(eastern standard time) timestamp by default in 12 hour(hour:minute:second). it can take any of the formating codes</span>
+                    <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes">here</a>
+                    <span>with the adition of Mdo</span>
+                    <span class="warning">(no % in fromt of it)</span>
+                    <span>its the same as</span>
+                    <code>%d</code>
+                    <span>but the respective st, nd, rd or th ordinal version</span>
+                    <br>
+                    <span>example:</span>
+                    <code>{datetime(%A %B Mdo %Y %I:%M%:S:%p)}</code>
+                    <span id="datetime"></span>
+                  </div>
+                </th>
+              </tr>
             </tbody>
           </table>
           <br>
@@ -1247,6 +1266,7 @@
         highlight.setup();
         highlight.detect();
 
+        document.getElementById("datetime").innerHTML = ` - would return "${moment().format("dddd MMMM Do YYYY hh:mm A")}" in EST`
         document.getElementById("main").addEventListener('scroll', function() {
           highlight.detect();
         });
