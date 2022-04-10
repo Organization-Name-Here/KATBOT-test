@@ -152,6 +152,7 @@ nav li {
   color: white;
   /*! margin: 0 0 0 250px; */
   overflow-y: auto;
+  width: 100%;
 }
 
 .colorretate {
