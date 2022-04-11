@@ -536,12 +536,42 @@
             <li><span class="notice_me">defaults</span>
             </li>
             <ul>
+              <div>
+                <li>
+                  <span>punishment/fail</span>
+                  <span class="commented">#just explans what each does</span>
+                </li>
+                <table>
+                  <tbody>
+                    <tr class="tr_title ">
+                      <th>value</th>
+                      <th>what it does</th>
+                    </tr>
+                    <tr>
+                      <th>delete</th>
+                      <th>deletes message and gives warning</th>
+                    </tr>
+                    <tr>
+                      <th>timeout</th>
+                      <th>times user out and gives warning</th>
+                    </tr>
+                    <tr>
+                      <th>ban</th>
+                      <th>bans user and gives warning</th>
+                    </tr>
+                    <tr>
+                      <th>soft</th>
+                      <th>does nothing but give a warning</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <li>
                 <span>prefix</span>
                 <span class="commented">#the basis for every command</span>
                 <table>
                   <tbody>
-                    <tr class="tr_title ">
+                    <tr class="tr_title">
                       <th>aug</th>
                       <th>default</th>
                     </tr>
@@ -584,76 +614,78 @@
                   </tbody>
                 </table>
               </li>
-              <!--<li>
-      <span>symbol</span>
-      <span class="commented">#symbol spam prevention and punishment</span>
-      <table>
-        <tbody>
-          <tr class="title">
-            <th>aug</th>
-            <th>default</th>
-          </tr>
-          <tr>
-            <th><span class="none">active</span></th>
-            <th>false</th>
-          </tr>
-          <tr>
-            <th><span class="none">amount</span></th>
-            <th>30</th>
-          </tr>
-          <tr>
-            <th><span class="none">message</span></th>
-            <th>$@{user} please watch the symbol spam soft warning</th>
-          </tr>
-          <tr>
-            <th><span class="none">reason</span></th>
-            <th>symbol spam</th>
-          </tr>
-          <tr>
-            <th><span class="none">punishment</span></th>
-            <th>soft</th>
-          </tr>
-          <tr>
-            <th><span class="none">fail</span></th>
-            <th>soft</th>
-          </tr>
-        </tbody>
-      </table>
-    </li>
-    <li>
-      <span>caps</span>
-      <span class="commented">#CAPS spam prevention and punishment</span>
-      <table>
-        <tr class="title">
-          <th>aug</th>
-          <th>default</th>
-        </tr>
-        <tr>
-          <th><span class="none">active</span></th>
-          <th>false</th>
-        </tr>
-        <tr>
-          <th><span class="none">amount</span></th>
-          <th>60</th>
-        </tr>
-        <tr>
-          <th><span class="none">message</span></th>
-          <th>your message contains {percent}% capital letters! soft warning. watch the caps spam</th>
-        </tr>
-        <tr>
-          <th><span class="none">reason</span></th>
-          <th>caps spam</th>
-        </tr>
-        <tr>
-          <th><span class="none">punishment</span></th>
-          <th>soft</th>
-        </tr>
-        <tr>
-          <th><span class="none">fail</span></th>
-          <th>soft</th>
-        </tr>
-      </table>
-    </li>-->
+              <li>
+                <span>symbol</span>
+                <span class="commented">#symbol spam prevention and punishment</span>
+                <table>
+                  <tbody>
+                    <tr class="tr_title">
+                      <th>aug</th>
+                      <th>default</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">active</span></th>
+                      <th>false</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">amount</span></th>
+                      <th>30</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">message</span></th>
+                      <th>$@{user} please watch the symbol spam soft warning</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">reason</span></th>
+                      <th>symbol spam</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">punishment</span></th>
+                      <th>soft</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">fail</span></th>
+                      <th>soft</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                <span>caps</span>
+                <span class="commented">#CAPS spam prevention and punishment</span>
+                <table>
+                  <tbody>
+                    <tr class="tr_title">
+                      <th>aug</th>
+                      <th>default</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">active</span></th>
+                      <th>false</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">amount</span></th>
+                      <th>60</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">message</span></th>
+                      <th>your message contains {percent}% capital letters! soft warning. watch the caps spam</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">reason</span></th>
+                      <th>caps spam</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">punishment</span></th>
+                      <th>soft</th>
+                    </tr>
+                    <tr>
+                      <th><span class="none">fail</span></th>
+                      <th>soft</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
               <li>
                 <span>link</span>
                 <span class="commented">#link detection</span>
@@ -1236,7 +1268,10 @@
                 </li>
                 <li><span>damge <span class="commented">#everyone up</span></span>
                   <ul>
-                    <li><span>&lt;pk type&gt; <span class="commented"> #get damage relations of a Pokémon type; eg fire, fighting</span></span></li>
+                    <li>
+                      <span>&lt;pk type&gt;</span>
+                      <span class="commented"> #get damage relations of a Pokémon type; eg fire, fighting</span>
+                    </li>
                   </ul>
                 </li>
               </ul>
