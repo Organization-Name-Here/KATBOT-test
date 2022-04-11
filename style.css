@@ -60,12 +60,6 @@ nav li {
   font-weight: 500;
 }
 
-/* .algolia-autocomplete {
-  position: relative;
-  display: inline-block;
-  direction: ltr;
-} */
-
 #header .nav__links a {
   color: #fff;
   text-decoration: none;
@@ -153,6 +147,7 @@ nav li {
   /*! margin: 0 0 0 250px; */
   overflow-y: auto;
   width: 100%;
+  padding-left: 2.5rem;
 }
 
 .colorretate {
@@ -332,6 +327,8 @@ nav li {
   padding: 2.5rem;
   width: 15em;
   overflow-y: auto;
+  border-right: 1px solid #D9D9DE;
+  padding-right: 0.5em;
 }
 
 .title {
