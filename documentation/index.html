@@ -1023,7 +1023,17 @@
         </section>
         <hr>
         <section id="messageaug" class="">
-          <h2>Message augments</h2><span>docs for this thing</span>
+          <h2>Message augments</h2>
+          <ul>
+            <li>$ at the start of a message</li>
+            <ul>
+              <li>
+                <span>example:</span>
+                <code>$the bots name is "{nickname}"</code>
+                <span> - message will appear as "the bots name is "katcbot""</span>
+              </li>
+            </ul>
+          </ul>
           <table>
             <tbody>
               <tr class="tr_title">
@@ -1052,15 +1062,15 @@
               </tr>
               <tr>
                 <th><code>{youtube}</code></th>
-                <th><span>puts message through KATCBOTS built in YouTube tittle function, will not work if there is not a YouTube link in message</span></th>
+                <th><span>gets title of given youtube video</span></th>
               </tr>
               <tr>
                 <th><code>{math-(math)}</code></th>
-                <th><span>usage {math-(math in here)} allows complex math like {math-(((520/4.536)/(19*3.937)**2)*703)} for example (see command "math" for more info)</span></th>
+                <th><span>allows usage of math like {math-(((520/4.536)/(19*3.937)**2)*703)} in command</span></th>
               </tr>
               <tr>
                 <th><code>{input}</code></th>
-                <th><span>make command only work with a input from a user (eg CommandName UserInput)</span></th>
+                <th><span>makes command able to take input from user</span></th>
               </tr>
               <tr>
                 <th><code>{datetime()}</code></th>
