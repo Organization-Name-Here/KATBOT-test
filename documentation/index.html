@@ -294,6 +294,7 @@
         </ul>
         <p class="label">misc</p>
         <ul class="item">
+          <li class=""><a class="" href="#twitch api">twitch api</a></li>
           <li class=""><a class="" href="#commands">commands</a></li>
         </ul>
       </nav>
@@ -891,55 +892,6 @@
           <ul>
             <li><span>permit &lt;viewer&gt; <span class="commented">#allows a non mod/vip/sub to post one link</span></span></li>
             <li><span>searchgame &lt;x&gt; <span class="commented">#game look up</span></span></li>
-            <div>
-              <li><span>game</span>
-              </li>
-              <ul>
-                <span>changes game or leave empty to current game</span>
-                <div>
-                  <li><span>game</span>
-                  </li>
-                  <ul>
-                    <span>return current game</span>
-                  </ul>
-                </div>
-                <div>
-                  <li><span>game &lt;x&gt;</span>
-                  </li>
-                  <ul>
-                    <span>sets game</span>
-                    <li>
-                      <span>example:</span>
-                      <code>game halo 5</code><span> - sets game to "halo 5"</span></li>
-                  </ul>
-                </div>
-              </ul>
-            </div>
-            <div>
-              <li><span>title</span>
-              </li>
-              <ul>
-                <span>changes title or leave empty to current title</span>
-                <div>
-                  <li><span>title</span>
-                  </li>
-                  <ul>
-                    <span>return current title</span>
-                  </ul>
-                </div>
-                <div>
-                  <li><span>title &lt;x&gt;</span>
-                  </li>
-                  <ul>
-                    <span>sets title</span>
-                    <li>
-                      <span>example:</span>
-                      <code>title error can not get var "title"</code>
-                      <span> - sets title to "error can not get var "title""</span></li>
-                  </ul>
-                </div>
-              </ul>
-            </div>
           </ul>
         </section>
         <hr>
@@ -1270,6 +1222,71 @@
           </ul>
         </section>
         <hr>
+        <section id="twitch api">
+          <h2>twitch releated</h2>
+          <ul>
+            <li>
+              <span>viewers </span>
+              <span class="commented">#gets amount of viewer</span>
+            </li>
+            <li><span>uptime </span><span class="commented">#get how long the stream has been live</span></li>
+            <li>
+              <span>chatters </span>
+              <span class="commented">#gets number of chatter connected to chat</span>
+            </li>
+            <li><span>followage &lt;viewer&gt; &lt;empty&gt;<span class="see-vertical-bar">|</span>stats <span class="commented">#gets how long a user or yourself has been following the broadcaster</span></span></li>
+            <div>
+              <li><span>title</span>
+              </li>
+              <ul>
+                <span>changes title or leave empty to current title</span>
+                <div>
+                  <li><span>title</span>
+                  </li>
+                  <ul>
+                    <span>return current title</span>
+                  </ul>
+                </div>
+                <div>
+                  <li><span>title &lt;x&gt;</span>
+                  </li>
+                  <ul>
+                    <span>sets title</span>
+                    <li>
+                      <span>example:</span>
+                      <code>title error can not get var "title"</code>
+                      <span> - sets title to "error can not get var "title""</span></li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+            <div>
+              <li><span>game</span>
+              </li>
+              <ul>
+                <span>changes game or leave empty to current game</span>
+                <div>
+                  <li><span>game</span>
+                  </li>
+                  <ul>
+                    <span>return current game</span>
+                  </ul>
+                </div>
+                <div>
+                  <li><span>game &lt;x&gt;</span>
+                  </li>
+                  <ul>
+                    <span>sets game</span>
+                    <li>
+                      <span>example:</span>
+                      <code>game halo 5</code><span> - sets game to "halo 5"</span></li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+          </ul>
+        </section>
+        <hr>
         <section id="commands" class="">
           <h2>commands</h2>
           <ul>
@@ -1279,15 +1296,6 @@
             <li><span>use &lt;viewer&gt;<span class="see-vertical-bar">|</span>&lt;empty&gt; <span class="commented">#use a attack move from Pokemon</span></span></li>
             <li><span>math &lt;number&gt; +<span class="see-vertical-bar">|</span>-<span class="see-vertical-bar">|</span>*<span class="see-vertical-bar">|</span>**<span class="see-vertical-bar">|</span>/<span class="see-vertical-bar">|</span>// &lt;number&gt; <span class="commented">#able to do complex math +, –, *, ** (Power), / Division (float), // Division (floor) % Modulus: returns the remainder when first operand is divided by the second x % y</span></span></li>
             <li><span>echo &lt;x&gt; <span class="commented">#makes KATBOT say what ever is after "echo "</span></span></li>
-            <li>
-              <span>viewers </span>
-              <span class="commented">#gets amount of viewer</span>
-            </li>
-            <li>
-              <span>chatters </span>
-              <span class="commented">#gets number of chatter connected to chat</span>
-            </li>
-            <li><span>uptime </span><span class="commented">#get how long the stream has been live</span></li>
             <div>
               <li><span>#&lt;channel name&gt;/&lt;command name&gt;</span></li>
               <ul>
@@ -1298,7 +1306,6 @@
             <li><span>exit</span></li>
             <li><span>about</span></li>
             <li><span>supportlink</span></li>
-            <li><span>followage &lt;viewer&gt; &lt;empty&gt;<span class="see-vertical-bar">|</span>stats <span class="commented">#gets how long a user or yourself has been following the broadcaster</span></span></li>
             <div>
               <li>
                 <code>color &lt;color name&gt; &lt;y&gt; </code>
