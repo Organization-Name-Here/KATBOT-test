@@ -300,239 +300,289 @@
       <div class="docdiv" id="main">
         <h1 style="border-bottom: 1px solid #D9D9DE;">Documentation</h1>
         <section id="guide lines" class="">
-          <h2><span>guide lines</span></h2>
-          <li><span class="warning"><b>YES PUT THE</b> <span class="double-qoute">"</span> yes thay have to be <span class="double-qoute">"</span> <b>NOT</b> <span class="single-qoute">'</span></span></li>
-          <li><span>every thing outside of these &lt;x&gt; within [ ] is required</span></li>
-          <li><span><span class="commented">#</span> is just a comment out it means nothing and every thing on that line after it(including it) should be not be added to the message</span>
-            <ul>
-              <li><span class="commented">#except for use in calling a custom command from another channel then the same as above just double ##</span></li>
-            </ul>
-          </li>
-          <li><span class="see-vertical-bar">|</span> = or</li>
-          <li><span><span class="red">&lt;<span class="white">x</span>&gt;</span> one input</span></li>
-          <li><span><span class="green">&lt;<span class="white">y</span>&gt;</span> another input</span></li>
-          <li><span><span class="blue">&lt;<span class="white">z</span>&gt;</span> a third input</span></li>
-          <li><span>&lt;x<span class="see-vertical-bar">|</span>y<span class="see-vertical-bar">|</span>z&gt; x or y or z</span></li>
-          <li><span>[] option</span></li>
-          <li><span>[&lt;x&gt; &lt;y<span class="see-vertical-bar">|</span>z&gt;] x and y or x and z</span></li>
-          <li><span><span class="colorretate">&lt;<span class="white">viewer</span>&gt;</span> viewer name</span></li>
-          <li><span><span class="colorretate">&lt;<span class="white">empty</span>&gt;</span> nothing for that input</span></li>
-          <li><span>None means there is no augments at all, NOT None being the augment</span></li>
-          <li><span><span class="warning">()</span> is a note and only there to clarify usage <span class="warning">DO NOT</span> add <span class="warning">()</span> or anything inside it in message</span></li>
-          <li><span class="commented">#access hierarchy</span>
-            <ul>
-              <li><span>creator</span></li>
-              <li><span>broadcaster</span></li>
-              <li><span>moderator</span></li>
-              <li><span>vip</span></li>
-              <li><span>subscriber</span></li>
-              <li><span>regulars</span></li>
-              <li><span>everyone</span></li>
-            </ul>
-          </li>
+          <h2>guide lines</h2>
+          <ul>
+            <li><span class="warning"><b>YES PUT THE</b> <span class="double-qoute">"</span> yes thay have to be <span class="double-qoute">"</span> <b>NOT</b> <span class="single-qoute">'</span></span></li>
+            <li><span>every thing outside of these &lt;x&gt; within [ ] is required</span></li>
+            <div>
+              <li>
+                <span class="commented">#</span>
+                <span>is just a comment out it means nothing and every thing on that line after it(including it) should be not be added to the message</span>
+              </li>
+              <ul>
+                <li><span class="commented">#except for use in calling a custom command from another channel then the same as above just double ##</span></li>
+              </ul>
+            </div>
+            <li><span class="see-vertical-bar">|</span> = or</li>
+            <li><span><span class="red">&lt;<span class="white">x</span>&gt;</span> one input</span></li>
+            <li><span><span class="green">&lt;<span class="white">y</span>&gt;</span> another input</span></li>
+            <li><span><span class="blue">&lt;<span class="white">z</span>&gt;</span> a third input</span></li>
+            <li><span>&lt;x<span class="see-vertical-bar">|</span>y<span class="see-vertical-bar">|</span>z&gt; x or y or z</span></li>
+            <li><span>[] option</span></li>
+            <li><span>[&lt;x&gt; &lt;y<span class="see-vertical-bar">|</span>z&gt;] x and y or x and z</span></li>
+            <li><span><span class="colorretate">&lt;<span class="white">viewer</span>&gt;</span> viewer name</span></li>
+            <li><span><span class="colorretate">&lt;<span class="white">empty</span>&gt;</span> nothing for that input</span></li>
+            <li><span>None means there is no augments at all, NOT None being the augment</span></li>
+            <li><span><span class="warning">()</span> is a note and only there to clarify usage <span class="warning">DO NOT</span> add <span class="warning">()</span> or anything inside it in message</span></li>
+            <div>
+              <li><span class="commented">#access hierarchy</span>
+              </li>
+              <ul>
+                <li><span>creator</span></li>
+                <li><span>broadcaster</span></li>
+                <li><span>moderator</span></li>
+                <li><span>vip</span></li>
+                <li><span>subscriber</span></li>
+                <li><span>regulars</span></li>
+                <li><span>everyone</span></li>
+              </ul>
+            </div>
+          </ul>
         </section>
         <hr>
         <section id="custom commands" class="">
-          <h2>Custom commands</h2><span>add/modify or remove a command or return response of command when given command name or return all commands when empty for more complex commands add $ at the start of the command</span><br><br><span>access change what level of viewer can access a command can also limit it to a specific user(does not include creator or broadcaster)</span>
+          <div>
+            <h2>Custom commands</h2><span>add/modify or remove a command or return response of command when given command name or return all commands when empty for more complex commands add $ at the start of the command</span><br><br><span>access change what level of viewer can access a command can also limit it to a specific user(does not include creator or broadcaster)</span>
+          </div>
           <ul>
             <li style="display: none;"><span>commands add<span class="see-vertical-bar">|</span>edit<span class="see-vertical-bar">|</span>access<span class="see-vertical-bar">|</span>&lt;empty&gt; &lt;command name&gt; [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[(only with add<span class="see-vertical-bar">|</span>edit)&lt;x&gt; &lt;y&gt;]<span class="see-vertical-bar">|</span>[(only with edit)&lt;old command name&gt; &lt;new command name&gt;]<span class="see-vertical-bar">|</span>[remove &lt;x&gt;]</span>
             </li>
-            <li><span>use of <span class="colorretate">$</span> is allowed usage shown in <a class="" href="#messageaug">message augments</a></span>
+            <div>
+              <li><span>use of <span class="colorretate">$</span> is allowed usage shown in <a class="" href="#messageaug">message augments</a></span>
+              </li>
               <ul>
                 <li><span class="warning">using</span><code>{user}</code><span class="warning">or</span><code>{input}</code><span class="warning">more than once will result in duplicate text but you CAN use them more than once if you want</span></li>
               </ul>
-            </li>
-            <li><code>commands add</code>
-            </li>
-            <ul>
-              <div><span>creates a command</span>
-                <li><code>commands add &lt;command name&gt; &lt;response&gt;</code></li>
-                <ul>
-                  <li>
-                    <span>Example:</span>
-                    <code>commands add error not a real error</code>
-                    <span> - Adds command called "error".</span>
-                  </li>
-                </ul>
-              </div>
-            </ul>
-            <li><code>commands edit</code>
-            </li>
-            <ul>
-              <div><span>edits given command</span>
-                <li><code>commands edit &lt;command name<span class="see-vertical-bar">|</span>key<span class="warning">(it edits the name of the command)</span>&gt; &lt;response&gt;</code></li>
-                <ul>
-                  <li>
-                    <span>Example:</span>
-                    <code>commands edit error just a test nothing wrong</code>
-                    <span> - edits "error" responce to "just a test nothing wrong".</span>
-                  </li>
-                </ul>
-              </div>
-            </ul>
-            <li><code>commands access</code>
-            </li>
-            <ul>
-              <div><span>makes command usable by given acces level</span>
-                <li><code>commands access &lt;command name&gt; &lt;mod<span class="see-vertical-bar">|</span>vip<span class="see-vertical-bar">|</span>sub<span class="see-vertical-bar">|</span>eve&gt; &lt;true<span class="see-vertical-bar">|</span>false&gt;</code></li>
-                <ul>
-                  <li><code>commands access &lt;command name&gt; user &lt;add<span class="see-vertical-bar">|</span>remove&gt; &lt;name&gt;</code></li><span>restricts command to given user </span>
-                </ul>
-              </div><br>
-              <div>
-                <li><code>commands access regulars &lt;add<span class="see-vertical-bar">|</span>remove&gt; &lt;name&gt;</code></li><span>adds given user to regulars </span>
-              </div>
-              <br>
-              <div>
-                <li><code>commands access regulars &lt;add<span class="see-vertical-bar">|</span>remove&gt; &lt;name&gt;</code></li><span>adds given user to regulars </span><br><span>regulars are able to use some commands but not others</span>
-              </div>
-            </ul>
+            </div>
+            <div>
+              <li><code>commands add</code>
+              </li>
+              <ul>
+                <div><span>creates a command</span>
+                  <li><code>commands add &lt;command name&gt; &lt;response&gt;</code></li>
+                  <ul>
+                    <li>
+                      <span>Example:</span>
+                      <code>commands add error not a real error</code>
+                      <span> - Adds command called "error".</span>
+                    </li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+            <div>
+              <li><code>commands edit</code>
+              </li>
+              <ul>
+                <div><span>edits given command</span>
+                  <li><code>commands edit &lt;command name<span class="see-vertical-bar">|</span>key<span class="warning">(it edits the name of the command)</span>&gt; &lt;response&gt;</code></li>
+                  <ul>
+                    <li>
+                      <span>Example:</span>
+                      <code>commands edit error just a test nothing wrong</code>
+                      <span> - edits "error" responce to "just a test nothing wrong".</span>
+                    </li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+            <div>
+              <li><code>commands access</code>
+              </li>
+              <ul>
+                <div><span>makes command usable by given acces level</span>
+                  <li><code>commands access &lt;command name&gt; &lt;mod<span class="see-vertical-bar">|</span>vip<span class="see-vertical-bar">|</span>sub<span class="see-vertical-bar">|</span>eve&gt; &lt;true<span class="see-vertical-bar">|</span>false&gt;</code></li>
+                  <ul>
+                    <li><code>commands access &lt;command name&gt; user &lt;add<span class="see-vertical-bar">|</span>remove&gt; &lt;name&gt;</code></li><span>restricts command to given user </span>
+                  </ul>
+                </div><br>
+                <div>
+                  <li><code>commands access regulars &lt;add<span class="see-vertical-bar">|</span>remove&gt; &lt;name&gt;</code></li><span>adds given user to regulars </span>
+                </div>
+                <br>
+                <div>
+                  <li><code>commands access regulars &lt;add<span class="see-vertical-bar">|</span>remove&gt; &lt;name&gt;</code></li><span>adds given user to regulars </span><br><span>regulars are able to use some commands but not others</span>
+                </div>
+              </ul>
+            </div>
           </ul>
         </section>
         <hr>
         <section id="autoreplies" class="">
           <div>
-            <h2>Auto replies</h2><span>add/modify or remove a auto replay or return auto replies response if given auto replay name or return all auto replies when empty</span><br><span>default random chance 30 but chance for the auto replies it can be changed after making it by using the chance augment</span>
+            <h2>Auto replies</h2>
+            <span>add/modify or remove a auto replay or return auto replies response if given auto replay name or return all auto replies when empty</span><br><span>default random chance 30 but chance for the auto replies it can be changed after making it by using the chance augment</span>
           </div>
-          <div>
-            <li><code>autoreply add</code>
-            </li>
-            <ul><span>creates a auto reply with a random chance of "every one in 30"</span>
-              <li><code>autoreply add &lt;autoreply name&gt; &lt;response&gt;</code></li>
+          <ul>
+            <div>
+              <li>use of <span class="colorretate">$</span> is allowed usage shown in <a class="" href="#messageaug">message augments</a>
+              </li>
               <ul>
                 <li>
-                  <span>example:</span>
-                  <code>autoreply add error a error has occurred</code>
-                  <span> - Adds auto reply called "error"</span>
+                  <code>{user}</code>
+                  <span class="warning">DO NOT work in vars and will be removed</span>
                 </li>
               </ul>
-            </ul>
-          </div>
-          <div>
-            <li><code>autoreply edit</code>
-            </li>
-            <ul>
-              <span>edits a given auto reply</span>
-              <ul>
-                <li><span class="notice_me">default</span></li>
+            </div>
+            <div>
+              <li><code>autoreply add</code>
+              </li>
+              <ul><span>creates a auto reply with a random chance of "every one in 30"</span>
                 <ul>
-                  <li>
-                    <span>firsttimechattergreeting</span>
-                    <span class="commented">#first time chatter greeting</span>
-                    <br>
-                    <span title="(its long I know...)">it CAN NOT BE DELETED but the chance and message can be changed</span><br><span>send a message when its a viewers first time chatting</span>
-                    <table>
-                      <tbody>
-                        <tr class="tr_title ">
-                          <th>aug</th>
-                          <th>default</th>
-                        </tr>
-                        <tr>
-                          <th><span class="none">active</span></th>
-                          <th>false</th>
-                        </tr>
-                        <tr>
-                          <th><span class="none">message</span></th>
-                          <th>$welcome @{user} be sure to read the {prefix}rules</th>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </li>
+                  <li><code>autoreply add &lt;autoreply name&gt; &lt;response&gt;</code></li>
+                  <ul>
+                    <li>
+                      <span>example:</span>
+                      <code>autoreply add error a error has occurred</code>
+                      <span> - Adds auto reply called "error"</span>
+                    </li>
+                  </ul>
                 </ul>
-                <ul></ul>
               </ul>
-              <li><code>autoreply edit &lt;autoreply name<span class="see-vertical-bar">|</span>key<span class="warning">(it edits the name of the command)</span>&gt; &lt;response&gt;</code></li>
+            </div>
+            <div>
+              <li><code>autoreply edit</code>
+              </li>
               <ul>
-                <li>
-                  <span>example:</span>
-                  <code>autoreply edit error this might be a error you should check</code>
-                  <span> - edits autoreply "error" to "this might be a error you should check"</span>
-                </li>
-                <li>
-                  <span>example:</span>
-                  <code>autoreply edit error chance 60</code>
-                  <span> - edits autoreply "error" random chance to 60</span>
-                </li>
+                <span>edits a given auto reply</span>
+                <ul>
+                  <li><span class="notice_me">default</span></li>
+                  <ul>
+                    <li>
+                      <span>firsttimechattergreeting</span>
+                      <span class="commented">#first time chatter greeting</span>
+                      <br>
+                      <span title="(its long I know...)">it CAN NOT BE DELETED but the chance and message can be changed</span><br><span>send a message when its a viewers first time chatting</span>
+                      <table>
+                        <tbody>
+                          <tr class="tr_title ">
+                            <th>aug</th>
+                            <th>default</th>
+                          </tr>
+                          <tr>
+                            <th><span class="none">active</span></th>
+                            <th>false</th>
+                          </tr>
+                          <tr>
+                            <th><span class="none">message</span></th>
+                            <th>$welcome @{user} be sure to read the {prefix}rules</th>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </li>
+                  </ul>
+                  <ul></ul>
+                </ul>
+                <ul>
+                  <li><code>autoreply edit &lt;autoreply name<span class="see-vertical-bar">|</span>key<span class="warning">(it edits the name of the command)</span>&gt; &lt;response&gt;</code></li>
+                  <ul>
+                    <li>
+                      <span>example:</span>
+                      <code>autoreply edit error this might be a error you should check</code>
+                      <span> - edits autoreply "error" to "this might be a error you should check"</span>
+                    </li>
+                    <li>
+                      <span>example:</span>
+                      <code>autoreply edit error chance 60</code>
+                      <span> - edits autoreply "error" random chance to 60</span>
+                    </li>
+                  </ul>
+                </ul>
               </ul>
-            </ul>
-          </div>
-          <div>
-            <li><code>autoreply remove</code>
-            </li>
-            <ul>
-              <span>removes given auto reply</span>
-              <li><code>autoreply remove &lt;autoreply name&gt;</code></li>
-            </ul>
-          </div>
+            </div>
+            <div>
+              <li><code>autoreply remove</code>
+              </li>
+              <ul>
+                <span>removes given auto reply</span>
+                <ul>
+                  <li><code>autoreply remove &lt;autoreply name&gt;</code></li>
+                </ul>
+              </ul>
+            </div>
+          </ul>
         </section>
         <hr>
         <section id="variables" class="">
-          <h2>Variables</h2>
-          <span>add/modify or remove a local variable(LV)(used in code) or return LV response given LV name or return all LVs when empty</span><br>
+          <div>
+            <h2>Variables</h2>
+            <span>add/modify or remove a local variable(LV)(used in code) or return LV response given LV name or return all LVs when empty</span>
+          </div>
           <ul>
-            <li>use of <span class="colorretate">$</span> is allowed usage shown in <a class="" href="#messageaug">message augments</a>
+            <!--<li>localvars add<span class="see-vertical-bar">|</span>edit<span class="see-vertical-bar">|</span>&lt;empty&gt; &lt;local var name&gt; [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[<span class="warning">(only with add<span class="see-vertical-bar">|</span>edit)</span>&lt;x&gt; &lt;y&gt;]<span class="see-vertical-bar">|</span>[remove &lt;x&gt;]</li>-->
+            <div>
+              <li>use of <span class="colorretate">$</span> is allowed usage shown in <a class="" href="#messageaug">message augments</a>
+              </li>
               <ul>
-                <li><code>{youtube}</code>
+                <li><code>{input}</code>
                   and
-                  <code>{input}</code>
-                  <span class="warning">DOES NOT work in vars and will be removed</span>
+                  <code>{cv-}</code>
+                  <span class="warning">DO NOT work in vars and will be removed</span>
                 </li>
               </ul>
-            </li>
-            <!--<li>localvars add<span class="see-vertical-bar">|</span>edit<span class="see-vertical-bar">|</span>&lt;empty&gt; &lt;local var name&gt; [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[<span class="warning">(only with add<span class="see-vertical-bar">|</span>edit)</span>&lt;x&gt; &lt;y&gt;]<span class="see-vertical-bar">|</span>[remove &lt;x&gt;]</li>-->
-            <li><code>localvars &lt;var name&gt;</code>
-            </li>
-            <ul><span>shows all avaible </span><span>shows all available vars</span>
-              <li>
-                <span>example:</span>
-                <code>localvars &lt;var name&gt;</code>
+            </div>
+            <div>
+              <li><code>localvars &lt;var name&gt;</code>
               </li>
-            </ul>
-            <li>
-              <code>localvars &lt;var name&gt; &lt;active<span class="see-vertical-bar">|</span>message<span class="see-vertical-bar">|</span>reason<span class="see-vertical-bar">|</span>punishment<span class="see-vertical-bar">|</span>fail&gt;</code>
-            </li>
-            <ul><span>return value of aug for given var</span>
+              <ul><span>shows all avaible </span><span>shows all available vars</span>
+                <li>
+                  <span>example:</span>
+                  <code>localvars &lt;var name&gt;</code>
+                </li>
+              </ul>
+            </div>
+            <div>
               <li>
-                <span>example:</span>
-                <code>localvars &lt;var name&gt;</code>
+                <code>localvars &lt;var name&gt; &lt;active<span class="see-vertical-bar">|</span>message<span class="see-vertical-bar">|</span>reason<span class="see-vertical-bar">|</span>punishment<span class="see-vertical-bar">|</span>fail&gt;</code>
               </li>
-            </ul>
-            <li><code>localvars add</code>
-            </li>
-            <ul>
-              <div><span>creates a auto reply with a random chance of "every one in 30"</span>
-                <li><code>localvars add &lt;var name&gt; &lt;x&gt;</code></li>
-                <ul>
-                  <li>
-                    <span>example:</span>
-                    <code>localvars add error a error has occurred</code>
-                    <span> - Adds var called "error"</span>
-                  </li>
-                </ul>
-              </div>
-            </ul>
-            <li><code>localvars edit</code>
-            </li>
-            <ul>
-              <div><span>edits a given var</span>
-                <li><code>localvars edit &lt;var name&gt; &lt;x&gt;</code></li>
-                <ul>
-                  <li>
-                    <span>example:</span>
-                    <code>localvars edit error this might be a error you should check</code>
-                    <span> - edits var "error" to "this might be a error you should check"</span>
-                  </li>
-                </ul>
-              </div>
-            </ul>
-            <li><code>localvars remove</code>
-            </li>
-            <ul>
-              <span>removes given var</span>
-              <li><span>example:</span><code>localvars remove &lt;var name&gt;</code></li>
-            </ul>
-          </ul>
-          <ul>
+              <ul><span>return value of aug for given var</span>
+                <li>
+                  <span>example:</span>
+                  <code>localvars &lt;var name&gt;</code>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <li><code>localvars add</code>
+              </li>
+              <ul>
+                <div><span>creates a auto reply with a random chance of "every one in 30"</span>
+                  <li><code>localvars add &lt;var name&gt; &lt;x&gt;</code></li>
+                  <ul>
+                    <li>
+                      <span>example:</span>
+                      <code>localvars add error a error has occurred</code>
+                      <span> - Adds var called "error"</span>
+                    </li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+            <div>
+              <li><code>localvars edit</code>
+              </li>
+              <ul>
+                <div><span>edits a given var</span>
+                  <li><code>localvars edit &lt;var name&gt; &lt;x&gt;</code></li>
+                  <ul>
+                    <li>
+                      <span>example:</span>
+                      <code>localvars edit error this might be a error you should check</code>
+                      <span> - edits var "error" to "this might be a error you should check"</span>
+                    </li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+            <div>
+              <li><code>localvars remove</code>
+              </li>
+              <ul>
+                <span>removes given var</span>
+                <li><span>example:</span><code>localvars remove &lt;var name&gt;</code></li>
+              </ul>
+            </div>
+            <br>
             <li><span class="notice_me">defaults</span>
             </li>
             <ul>
@@ -566,9 +616,11 @@
                   </tbody>
                 </table>
               </div>
-              <li>
-                <span>prefix</span>
-                <span class="commented">#the basis for every command</span>
+              <div>
+                <li>
+                  <span>prefix</span>
+                  <span class="commented">#the basis for every command</span>
+                </li>
                 <table>
                   <tbody>
                     <tr class="tr_title">
@@ -581,10 +633,12 @@
                     </tr>
                   </tbody>
                 </table>
-              </li>
-              <li>
-                <span>command cool down</span>
-                <span class="commented">#delay(in minutes) till katbot will recognize a command after another(does not apply to mods and broadcaster) help to avoide command spam</span>
+              </div>
+              <div>
+                <li>
+                  <span>command cool down</span>
+                  <span class="commented">#delay(in minutes) till katbot will recognize a command after another(does not apply to mods and broadcaster) help to avoide command spam</span>
+                </li>
                 <table>
                   <tbody>
                     <tr class="tr_title ">
@@ -597,10 +651,12 @@
                     </tr>
                   </tbody>
                 </table>
-              </li>
-              <li>
-                <span>time out amount</span>
-                <span class="commented">#default amount of time(in seconds) a user gets timed out for</span>
+              </div>
+              <div>
+                <li>
+                  <span>time out amount</span>
+                  <span class="commented">#default amount of time(in seconds) a user gets timed out for</span>
+                </li>
                 <table>
                   <tbody>
                     <tr class="tr_title ">
@@ -613,10 +669,12 @@
                     </tr>
                   </tbody>
                 </table>
-              </li>
-              <li>
-                <span>symbol</span>
-                <span class="commented">#symbol spam prevention and punishment</span>
+              </div>
+              <div>
+                <li>
+                  <span>symbol</span>
+                  <span class="commented">#symbol spam prevention and punishment</span>
+                </li>
                 <table>
                   <tbody>
                     <tr class="tr_title">
@@ -649,10 +707,12 @@
                     </tr>
                   </tbody>
                 </table>
-              </li>
-              <li>
-                <span>caps</span>
-                <span class="commented">#CAPS spam prevention and punishment</span>
+              </div>
+              <div>
+                <li>
+                  <span>caps</span>
+                  <span class="commented">#CAPS spam prevention and punishment</span>
+                </li>
                 <table>
                   <tbody>
                     <tr class="tr_title">
@@ -685,10 +745,12 @@
                     </tr>
                   </tbody>
                 </table>
-              </li>
-              <li>
-                <span>link</span>
-                <span class="commented">#link detection</span>
+              </div>
+              <div>
+                <li>
+                  <span>link</span>
+                  <span class="commented">#link detection</span>
+                </li>
                 <table>
                   <tbody>
                     <tr class="tr_title ">
@@ -717,10 +779,12 @@
                     </tr>
                   </tbody>
                 </table>
-              </li>
-              <li>
-                <span>banned words</span>
-                <span class="commented">#built-in list of racial and/or &lt;x&gt;phobic banned words</span>
+              </div>
+              <div>
+                <li>
+                  <span>banned words</span>
+                  <span class="commented">#built-in list of racial and/or &lt;x&gt;phobic banned words</span>
+                </li>
                 <table>
                   <tbody>
                     <tr class="tr_title ">
@@ -749,10 +813,12 @@
                     </tr>
                   </tbody>
                 </table>
-              </li>
-              <li>
-                <span>link blacklist</span>
-                <span class="commented">#built-in blacklisted links</span>
+              </div>
+              <div>
+                <li>
+                  <span>link blacklist</span>
+                  <span class="commented">#built-in blacklisted links</span>
+                </li>
                 <table>
                   <tbody>
                     <tr class="tr_title ">
@@ -781,10 +847,12 @@
                     </tr>
                   </tbody>
                 </table>
-              </li>
-              <li>
-                <span>phrase blacklist</span>
-                <span class="commented">#built-in blacklisted phrases</span>
+              </div>
+              <div>
+                <li>
+                  <span>phrase blacklist</span>
+                  <span class="commented">#built-in blacklisted phrases</span>
+                </li>
                 <table>
                   <tbody>
                     <tr class="tr_title">
@@ -813,7 +881,7 @@
                     </tr>
                   </tbody>
                 </table>
-              </li>
+              </div>
             </ul>
           </ul>
         </section>
@@ -823,123 +891,148 @@
           <ul>
             <li><span>permit &lt;viewer&gt; <span class="commented">#allows a non mod/vip/sub to post one link</span></span></li>
             <li><span>searchgame &lt;x&gt; <span class="commented">#game look up</span></span></li>
-            <li><span>game</span>
+            <div>
+              <li><span>game</span>
+              </li>
               <ul>
                 <span>changes game or leave empty to current game</span>
-                <li><span>game</span>
-                </li>
-                <ul>
-                  <span>return current game</span>
-                </ul>
-                <li><span>game &lt;x&gt;</span>
-                </li>
-                <ul>
-                  <span>sets game</span>
-                  <li>
-                    <span>example:</span>
-                    <code>game halo 5</code><span> - sets game to "halo 5"</span></li>
-                </ul>
+                <div>
+                  <li><span>game</span>
+                  </li>
+                  <ul>
+                    <span>return current game</span>
+                  </ul>
+                </div>
+                <div>
+                  <li><span>game &lt;x&gt;</span>
+                  </li>
+                  <ul>
+                    <span>sets game</span>
+                    <li>
+                      <span>example:</span>
+                      <code>game halo 5</code><span> - sets game to "halo 5"</span></li>
+                  </ul>
+                </div>
               </ul>
-            </li>
-            <li><span>title</span>
+            </div>
+            <div>
+              <li><span>title</span>
+              </li>
               <ul>
                 <span>changes title or leave empty to current title</span>
-                <li><span>title</span>
-                </li>
-                <ul>
-                  <span>return current title</span>
-                </ul>
-                <li><span>title &lt;x&gt;</span>
-                </li>
-                <ul>
-                  <span>sets title</span>
-                  <li>
-                    <span>example:</span>
-                    <code>title error can not get var "title"</code>
-                    <span> - sets title to "error can not get var "title""</span></li>
-                </ul>
+                <div>
+                  <li><span>title</span>
+                  </li>
+                  <ul>
+                    <span>return current title</span>
+                  </ul>
+                </div>
+                <div>
+                  <li><span>title &lt;x&gt;</span>
+                  </li>
+                  <ul>
+                    <span>sets title</span>
+                    <li>
+                      <span>example:</span>
+                      <code>title error can not get var "title"</code>
+                      <span> - sets title to "error can not get var "title""</span></li>
+                  </ul>
+                </div>
               </ul>
-            </li>
+            </div>
           </ul>
         </section>
         <hr>
         <section id="repeating messages" class="">
           <h2>Repeating messages</h2>
-          <span>add/modify or remove a repeating message or return repeating message response if given repeating messages name or return all repeating messages when empty, default repeat time is 30 minutes</span><br>
+          <span>add/modify or remove a repeating message or return repeating message response if given repeating messages name or return all repeating messages when empty, default repeat time is 30 minutes</span>
           <ul>
             <!--<li><span>repeatmsg add<span class="see-vertical-bar">|</span>edit<span class="see-vertical-bar">|</span>&lt;empty&gt; &lt;repeating msg name&gt; [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[(only with add<span class="see-vertical-bar">|</span>edit)&lt;time<span class="see-vertical-bar">|</span>delay<span class="see-vertical-bar">|</span>empty&gt; &lt;x&gt;]<span class="see-vertical-bar">|</span>[remove &lt;x&gt;]</span>
 </li>-->
-            <li>use of <span class="colorretate">$</span> is allowed usage shown in <a class="" href="#messageaug">message augments</a>
+            <div>
+              <li>
+                <span>use of</span>
+                <span class="colorretate">$</span>
+                <span>is allowed usage shown in</span>
+                <a class="" href="#messageaug">message augments</a>
+              </li>
               <ul>
                 <li>
                   <code>{user}</code>,
-                  <code>{input}</code>,
-                  <code>{youtube}</code>
+                  <code>{input}</code>
                   <span class="warning"> DO NOT work in repeating messages and will be removed!</span>
                 </li>
               </ul>
-            </li>
-            <li><span>repeatmsg add</span>
-            </li>
-            <ul>
-              <div><span>creates a repeat message that repeats every 30 minutes only if 10 messages have passed in that time otherwise the time restarts</span>
-                <li><code>repeatmsg add &lt;repeatmsg name&gt; &lt;x&gt;</code></li>
-                <ul>
-                  <li>
-                    <span>example:</span>
-                    <code>repeatmsg add error a error has occurred</code>
-                    <span> - Adds repeating message called "error"</span>
-                  </li>
-                </ul>
-              </div>
-            </ul>
-            <li><span>repeatmsg edit</span>
-            </li>
-            <ul>
-              <div>
-                <li><code>repeatmsg edit &lt;repeatmsg name&gt; &lt;x&gt;</code></li>
-                <ul>
-                  <span>edits a given repeating massage</span>
-                  <li>
-                    <span>example:</span>
-                    <code>repeatmsg edit error this might be a error you should check</code>
-                    <span> - edits var "error" to "this might be a error you should check"</span>
-                  </li>
-                </ul>
-              </div>
-            </ul>
-            <ul>
-              <div>
-                <li><code>repeatmsg edit &lt;repeatmsg name&gt; time &lt;x&gt;</code></li>
-                <ul>
-                  <span>edits a given repeating massage time</span>
-                  <li>
-                    <span>example:</span>
-                    <code>repeatmsg edit time error 50</code>
-                    <span> - edits repeatimg message "error" repeat time to 50 minutes</span>
-                  </li>
-                </ul>
-              </div>
-            </ul>
-            <ul>
-              <div>
-                <li><code>repeatmsg edit &lt;repeatmsg name&gt; delay &lt;x&gt;</code></li>
-                <ul>
-                  <span>edits a given repeating massage delay</span>
-                  <li>
-                    <span>example:</span>
-                    <code>repeatmsg edit delay error 20</code>
-                    <span> - edits repeatimg message "error" minimum amount of messages required to have passed to 20</span>
-                  </li>
-                </ul>
-              </div>
-            </ul>
-            <li><span>repeatmsg remove</span>
-            </li>
-            <ul>
-              <span>removes given repeating message</span>
-              <li><span>example:</span><code>repeatmsg remove &lt;repeatmsg name&gt;</code></li>
-            </ul>
+            </div>
+            <div>
+              <li><span>repeatmsg add</span>
+              </li>
+              <ul>
+                <div><span>creates a repeat message that repeats every 30 minutes only if 10 messages have passed in that time otherwise the time restarts</span>
+                  <li><code>repeatmsg add &lt;repeatmsg name&gt; &lt;x&gt;</code></li>
+                  <ul>
+                    <li>
+                      <span>example:</span>
+                      <code>repeatmsg add error a error has occurred</code>
+                      <span> - Adds repeating message called "error"</span>
+                    </li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+            <div>
+              <li><span>repeatmsg edit</span>
+              </li>
+              <ul>
+                <div>
+                  <li><code>repeatmsg edit &lt;repeatmsg name&gt; &lt;x&gt;</code></li>
+                  <ul>
+                    <span>edits a given repeating massage</span>
+                    <li>
+                      <span>example:</span>
+                      <code>repeatmsg edit error this might be a error you should check</code>
+                      <span> - edits var "error" to "this might be a error you should check"</span>
+                    </li>
+                  </ul>
+                </div>
+              </ul>
+              <ul>
+                <div>
+                  <li><code>repeatmsg edit &lt;repeatmsg name&gt; time &lt;x&gt;</code></li>
+                  <ul>
+                    <span>edits a given repeating massage time</span>
+                    <li>
+                      <span>example:</span>
+                      <code>repeatmsg edit time error 50</code>
+                      <span> - edits repeatimg message "error" repeat time to 50 minutes</span>
+                    </li>
+                  </ul>
+                </div>
+              </ul>
+              <ul>
+                <div>
+                  <li><code>repeatmsg edit &lt;repeatmsg name&gt; delay &lt;x&gt;</code></li>
+                  <ul>
+                    <span>edits a given repeating massage delay</span>
+                    <li>
+                      <span>example:</span>
+                      <code>repeatmsg edit delay error 20</code>
+                      <span> - edits repeatimg message "error" minimum amount of messages required to have passed to 20</span>
+                    </li>
+                  </ul>
+                </div>
+              </ul>
+            </div>
+            <div>
+              <li><span>repeatmsg remove</span></li>
+              <ul>
+                <span>removes given repeating message</span>
+                <li>
+                  <span>example:</span>
+                  <code>repeatmsg remove &lt;repeatmsg name&gt;</code>
+                </li>
+              </ul>
+            </div>
           </ul>
         </section>
         <hr>
@@ -953,26 +1046,31 @@
             <li><span>joke &lt;empty&gt;<span class="see-vertical-bar">|</span>[api &lt;id of joke&gt;] <span class="commented">#tell you a joke api &lt;id of joke&gt; #gets joke from given id from <a href="https://icanhazdadjoke.com/">i can haz dad joke</a></span></span></li>
             <li><span>suzy "&lt;x&gt;" "&lt;y&gt;" "&lt;z&gt;"</span></li>
             <li><span>flipcoin</span></li>
-            <li>
-              <span>maze</span>
+            <div>
+              <li><span>maze</span></li>
               <ul>
                 <li><span class="commented">#augments</span></li>
-                <li>
-                  <span>help <span class="commented">#get more information on given augment usage</span></span>
+                <div>
+                  <li>
+                    <span>help</span>
+                    <span class="commented">#get more information on given augment usage</span>
+                  </li>
                   <ul>
                     <li><span>help &lt;augment_name&gt;</span></li>
                   </ul>
-                </li>
+                </div>
                 <li><span>start <span class="commented">#loads in settings from settings augment</span></span></li>
-                <li><span>settings <span class="commented">#set settings before starting maze</span></span></li>
-                <ul>
-                  <li><span class="commented">#default pixels=20, size=12, tailing=False, tailcolor=blue, playcolor=green, exitcolor=red, wallcolor=black, mazecolor=white</span></li>
-                  <li><span class="commented">#settings({'NameofSetting':'value',comma between each one if there is more than one})</span></li>
-                </ul>
+                <div>
+                  <li><span>settings <span class="commented">#set settings before starting maze</span></span></li>
+                  <ul>
+                    <li><span class="commented">#default pixels=20, size=12, tailing=False, tailcolor=blue, playcolor=green, exitcolor=red, wallcolor=black, mazecolor=white</span></li>
+                    <li><span class="commented">#settings({'NameofSetting':'value',comma between each one if there is more than one})</span></li>
+                  </ul>
+                </div>
                 <li><span>move <span class="commented">#makes player move in maze</span></span></li>
                 <li><span>end <span class="commented">#stops maze</span></span></li>
               </ul>
-            </li>
+            </div>
             <li><span>house &lt;x<span class="see-vertical-bar">|</span>empty&gt; <span class="commented">#He kneels before no banner, owes allegiance to no Kell.</span></span></li>
             <li><span>didnt &lt;viewer<span class="see-vertical-bar">|</span>empty&gt;<span class="see-vertical-bar">|</span>&lt;viewer&gt; &lt;another viewer<span class="see-vertical-bar">|</span>empty&gt;</span></li>
           </ul>
@@ -984,48 +1082,55 @@
           <ul>
             <li><span class="notice_me">quote</span></li>
             <ul><span>gives ramdom quote</span>
-              <li><code>quote &lt;index&gt;</code>
+              <div>
+                <li><code>quote &lt;index&gt;</code></li>
                 <ul>returns quote in given index</ul>
-              </li>
-              <li><code>quote add</code>
+              </div>
+              <div>
+                <li><code>quote add</code></li>
                 <ul>adds given quote</ul>
-              </li>
-              <li><code>quote remove</code>
+              </div>
+              <div>
+                <li><code>quote remove</code></li>
                 <ul>removed given quote</ul>
-              </li>
+              </div>
             </ul>
+            <li><span>other</span></li>
+            <table>
+              <tbody>
+                <tr class="tr_title">
+                  <th>command</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th>maiq </th>
+                  <th>gives you a quote from M'aiq</th>
+                </tr>
+                <tr>
+                  <th>botrespond</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th>rotface</th>
+                  <th>'Hey buddy, spare a cap?'</th>
+                </tr>
+                <tr>
+                  <th>iconic </th>
+                  <th>some quotes I've collected</th>
+                </tr>
+              </tbody>
+              <tbody></tbody>
+            </table>
           </ul>
-          <table>
-            <tbody>
-              <tr class="tr_title">
-                <th>command</th>
-                <th></th>
-              </tr>
-              <tr>
-                <th>maiq </th>
-                <th>gives you a quote from M'aiq</th>
-              </tr>
-              <tr>
-                <th>botrespond</th>
-                <th></th>
-              </tr>
-              <tr>
-                <th>rotface</th>
-                <th>'Hey buddy, spare a cap?'</th>
-              </tr>
-              <tr>
-                <th>iconic </th>
-                <th>some quotes I've collected</th>
-              </tr>
-            </tbody>
-            <tbody></tbody>
-          </table>
         </section>
         <hr>
         <section id="messageaug" class="">
           <h2>Message augments</h2>
           <ul>
-            <li>$ at the start of a message</li>
+            <li>
+              <span class="colorretate">$</span>
+              <span>at the start of a message</span>
+            </li>
             <ul>
               <li>
                 <span>example:</span>
@@ -1033,127 +1138,136 @@
                 <span> - message will appear as "the bots name is "katcbot""</span>
               </li>
             </ul>
+            <table>
+              <tbody>
+                <tr class="tr_title">
+                  <th><span>augment</span></th>
+                  <th><span>what it does</span></th>
+                </tr>
+                <tr>
+                  <th><code>{stmrname}</code></th>
+                  <th><span>adds broadcaster name to message</span></th>
+                </tr>
+                <tr>
+                  <th><code>{user}</code></th>
+                  <th><span>puts user name of who used the command in the command response</span></th>
+                </tr>
+                <tr>
+                  <th><code>{nickname}</code></th>
+                  <th><span>it puts katcbot.</span></th>
+                </tr>
+                <tr>
+                  <th><code>{game}</code></th>
+                  <th><span>puts current game name</span></th>
+                </tr>
+                <tr>
+                  <th><code>{title}</code></th>
+                  <th><span>puts current stream title</span></th>
+                </tr>
+
+                <tr>
+                  <th><code>{math-(math)}</code></th>
+                  <th>
+                    <span>allows usage of math like</span>
+                    <code>{math-(((520/4.536)/(19*3.937)**2)*703)}</code>
+                    <span>in command</span>
+                  </th>
+                </tr>
+                <tr>
+                  <th><code>{input}</code></th>
+                  <th><span>makes command able to take input from user</span></th>
+                </tr>
+                <tr>
+                  <th><code>{cv-customvarname}</code></th>
+                  <th>
+                    <span>allows use of custom variable in message like</span>
+                    <code>{cv-testvar}</code>
+                    <span class="warning">using this in the custom var its calling does nothing and will be removed</span>
+                  </th>
+                </tr>
+                <tr>
+                  <th><code>{datetime()}</code></th>
+                  <th>
+                    <div>
+                      <span>adds EST(eastern standard time) timestamp by default in 12 hour(hour:minute:second). it can take any of the formating codes</span>
+                      <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes">here</a>
+                      <br>
+                      <span>with the adition of Mdo</span>
+                      <span class="warning">(no % in fromt of it)</span>
+                      <span>its the same as</span>
+                      <code>%d</code>
+                      <span>but the respective st, nd, rd or th ordinal version</span>
+                      <br>
+                      <span>example:</span>
+                      <code>{datetime(%A %B Mdo %Y %I:%M%:S:%p)}</code>
+                      <span id="datetime"></span>
+                    </div>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <table>
+              <tbody>
+                <tr>
+                  <th><code>{r-alistname}</code></th>
+                  <th>picks random entry from a list, available list names below</th>
+                </tr>
+                <tr class="tr_title">
+                  <th>list name</th>
+                  <th>???</th>
+                </tr>
+                <tr>
+                  <th>ball8</th>
+                  <th>ask the magic 8ball a question</th>
+                </tr>
+                <tr>
+                  <th>didnt</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th>farewell</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th>greeting</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th>jokes</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th>quotes</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th>iconic</th>
+                  <th>some quotes I've collected</th>
+                </tr>
+                <tr>
+                  <th>response</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th>touch</th>
+                  <th>he doesn't liek it please dont</th>
+                </tr>
+                <tr>
+                  <th>maiq</th>
+                  <th>gives you a quote from M'aiq</th>
+                </tr>
+                <tr>
+                  <th>FM</th>
+                  <th>Pokemon fighting moves</th>
+                </tr>
+                <tr>
+                  <th>Taniks</th>
+                  <th>He kneels before no banner, owes allegiance to no Kell.</th>
+                </tr>
+              </tbody>
+            </table>
           </ul>
-          <table>
-            <tbody>
-              <tr class="tr_title">
-                <th><span>augment</span></th>
-                <th><span>what it does</span></th>
-              </tr>
-              <tr>
-                <th><code>{stmrname}</code></th>
-                <th><span>adds broadcaster name to message</span></th>
-              </tr>
-              <tr>
-                <th><code>{user}</code></th>
-                <th><span>puts user name of who used the command in the command response</span></th>
-              </tr>
-              <tr>
-                <th><code>{nickname}</code></th>
-                <th><span>it puts katcbot.</span></th>
-              </tr>
-              <tr>
-                <th><code>{game}</code></th>
-                <th><span>puts current game name</span></th>
-              </tr>
-              <tr>
-                <th><code>{title}</code></th>
-                <th><span>puts current stream title</span></th>
-              </tr>
-              <tr>
-                <th><code>{youtube}</code></th>
-                <th><span>gets title of given youtube video</span></th>
-              </tr>
-              <tr>
-                <th><code>{math-(math)}</code></th>
-                <th><span>allows usage of math like {math-(((520/4.536)/(19*3.937)**2)*703)} in command</span></th>
-              </tr>
-              <tr>
-                <th><code>{input}</code></th>
-                <th><span>makes command able to take input from user</span></th>
-              </tr>
-              <tr>
-                <th><code>{datetime()}</code></th>
-                <th>
-                  <div>
-                    <span>adds EST(eastern standard time) timestamp by default in 12 hour(hour:minute:second). it can take any of the formating codes</span>
-                    <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes">here</a>
-                    <br>
-                    <span>with the adition of Mdo</span>
-                    <span class="warning">(no % in fromt of it)</span>
-                    <span>its the same as</span>
-                    <code>%d</code>
-                    <span>but the respective st, nd, rd or th ordinal version</span>
-                    <br>
-                    <span>example:</span>
-                    <code>{datetime(%A %B Mdo %Y %I:%M%:S:%p)}</code>
-                    <span id="datetime"></span>
-                  </div>
-                </th>
-              </tr>
-            </tbody>
-          </table>
-          <br>
-          <table>
-            <tbody>
-              <tr>
-                <th class="tr_code">{r-aListName}</th>
-                <th>picks random entry from a list, available lists</th>
-              </tr>
-              <tr class="tr_title">
-                <th>list name</th>
-                <th>???</th>
-              </tr>
-              <tr>
-                <th>ball8</th>
-                <th>ask the magic 8ball a question</th>
-              </tr>
-              <tr>
-                <th>didnt</th>
-                <th></th>
-              </tr>
-              <tr>
-                <th>farewell</th>
-                <th></th>
-              </tr>
-              <tr>
-                <th>greeting</th>
-                <th></th>
-              </tr>
-              <tr>
-                <th>jokes</th>
-                <th></th>
-              </tr>
-              <tr>
-                <th>quotes</th>
-                <th></th>
-              </tr>
-              <tr>
-                <th>iconic</th>
-                <th>some quotes I've collected</th>
-              </tr>
-              <tr>
-                <th>response</th>
-                <th></th>
-              </tr>
-              <tr>
-                <th>touch</th>
-                <th>he doesn't liek it please dont</th>
-              </tr>
-              <tr>
-                <th>maiq</th>
-                <th>gives you a quote from M'aiq</th>
-              </tr>
-              <tr>
-                <th>FM</th>
-                <th>Pokemon fighting moves</th>
-              </tr>
-              <tr>
-                <th>Taniks</th>
-                <th>He kneels before no banner, owes allegiance to no Kell.</th>
-              </tr>
-            </tbody>
-          </table>
         </section>
         <hr>
         <section id="commands" class="">
@@ -1173,99 +1287,108 @@
               <span>chatters </span>
               <span class="commented">#gets number of chatter connected to chat</span>
             </li>
-            <li><span>uptime </span><br><span class="commented">#get how long the stream has been live</span></li>
-            <li><span>#&lt;channel name&gt;/&lt;command name&gt; </span>
+            <li><span>uptime </span><span class="commented">#get how long the stream has been live</span></li>
+            <div>
+              <li><span>#&lt;channel name&gt;/&lt;command name&gt;</span></li>
               <ul>
                 <li><span>use a custom command from another channel to clarify / does not mean one or the other</span></li>
               </ul>
-            </li>
+            </div>
             <li><span>test</span></li>
             <li><span>exit</span></li>
             <li><span>about</span></li>
             <li><span>supportlink</span></li>
             <li><span>followage &lt;viewer&gt; &lt;empty&gt;<span class="see-vertical-bar">|</span>stats <span class="commented">#gets how long a user or yourself has been following the broadcaster</span></span></li>
-            <li>
-              <code>color &lt;color name&gt; &lt;y&gt; </code>
-              <span>make my console light up, makes the given message colored in console</span>
-            </li>
-            <ul>
-              <table>
-                <tbody>
-                  <tr class="tr_title">
-                    <th>b = background</th>
-                    <th>f = foreground</th>
-                  </tr>
-                  <tr>
-                    <th>b light black</th>
-                    <th>f light black</th>
-                  </tr>
-                  <tr>
-                    <th style="color:black; background: lightblue;">b light blue</th>
-                    <th style="color: lightblue;">f light blue</th>
-                  </tr>
-                  <tr>
-                    <th style="color:black; background: lightgreen;">b light green</th>
-                    <th style="color: lightgreen;">f light green</th>
-                  </tr>
-                  <tr>
-                    <th style="color:black; background: lightcyan;">b light cyan</th>
-                    <th style="color: lightcyan;">f light cyan</th>
-                  </tr>
-                  <tr>
-                    <th style="background: #ff3535;">b light red</th>
-                    <th style="color: #ff3535;">f light red</th>
-                  </tr>
-                  <tr>
-                    <th style="background: #ff35ff;">b light magenta</th>
-                    <th style="color: #ff35ff;">f light magenta</th>
-                  </tr>
-                  <tr>
-                    <th style="color:black; background: lightyellow;">b light yellow</th>
-                    <th style="color: lightyellow;">f light yellow</th>
-                  </tr>
-                  <tr>
-                    <th>b light white</th>
-                    <th>f light white</th>
-                  </tr>
-                  <tr>
-                    <th style="color: white; background:black;">b black</th>
-                    <th>f black</th>
-                  </tr>
-                  <tr>
-                    <th style="background:blue;">b blue</th>
-                    <th style="color: blue;">f blue</th>
-                  </tr>
-                  <tr>
-                    <th style="background:green;">b green</th>
-                    <th style="color: green;">f green</th>
-                  </tr>
-                  <tr>
-                    <th style="color:black; background:cyan;">b cyan</th>
-                    <th style="color: cyan;">f cyan</th>
-                  </tr>
-                  <tr>
-                    <th style="background:red;">b red</th>
-                    <th style="color: red;">f red</th>
-                  </tr>
-                  <tr>
-                    <th style="background:magenta;">b magenta</th>
-                    <th style="color: magenta;">f magenta</th>
-                  </tr>
-                  <tr>
-                    <th style="color:black; background:yellow;">b yellow</th>
-                    <th style="color: yellow;">f yellow</th>
-                  </tr>
-                  <tr>
-                    <th style="color:black; background:white;">b white</th>
-                    <th style="color:white;">f white</th>
-                  </tr>
-                </tbody>
-              </table>
-            </ul>
-            <li><span>evolve [&lt;Pokémon name&gt; &lt;empty<span class="see-vertical-bar">|</span>abilities<span class="see-vertical-bar">|</span>moves<span class="see-vertical-bar">|</span>bmi<span class="see-vertical-bar">|</span>stats<span class="see-vertical-bar">|</span>type&gt;]<span class="see-vertical-bar">|</span>[damage &lt;pk type&gt;] <span class="commented">#leave empty to get evolution chain</span></span>
+            <div>
+              <li>
+                <code>color &lt;color name&gt; &lt;y&gt; </code>
+                <span>make my console light up, makes the given message colored in console</span>
+              </li>
+              <ul>
+                <table>
+                  <tbody>
+                    <tr class="tr_title">
+                      <th>b = background</th>
+                      <th>f = foreground</th>
+                    </tr>
+                    <tr>
+                      <th>b light black</th>
+                      <th>f light black</th>
+                    </tr>
+                    <tr>
+                      <th style="color:black; background: lightblue;">b light blue</th>
+                      <th style="color: lightblue;">f light blue</th>
+                    </tr>
+                    <tr>
+                      <th style="color:black; background: lightgreen;">b light green</th>
+                      <th style="color: lightgreen;">f light green</th>
+                    </tr>
+                    <tr>
+                      <th style="color:black; background: lightcyan;">b light cyan</th>
+                      <th style="color: lightcyan;">f light cyan</th>
+                    </tr>
+                    <tr>
+                      <th style="background: #ff3535;">b light red</th>
+                      <th style="color: #ff3535;">f light red</th>
+                    </tr>
+                    <tr>
+                      <th style="background: #ff35ff;">b light magenta</th>
+                      <th style="color: #ff35ff;">f light magenta</th>
+                    </tr>
+                    <tr>
+                      <th style="color:black; background: lightyellow;">b light yellow</th>
+                      <th style="color: lightyellow;">f light yellow</th>
+                    </tr>
+                    <tr>
+                      <th>b light white</th>
+                      <th>f light white</th>
+                    </tr>
+                    <tr>
+                      <th style="color: white; background:black;">b black</th>
+                      <th>f black</th>
+                    </tr>
+                    <tr>
+                      <th style="background:blue;">b blue</th>
+                      <th style="color: blue;">f blue</th>
+                    </tr>
+                    <tr>
+                      <th style="background:green;">b green</th>
+                      <th style="color: green;">f green</th>
+                    </tr>
+                    <tr>
+                      <th style="color:black; background:cyan;">b cyan</th>
+                      <th style="color: cyan;">f cyan</th>
+                    </tr>
+                    <tr>
+                      <th style="background:red;">b red</th>
+                      <th style="color: red;">f red</th>
+                    </tr>
+                    <tr>
+                      <th style="background:magenta;">b magenta</th>
+                      <th style="color: magenta;">f magenta</th>
+                    </tr>
+                    <tr>
+                      <th style="color:black; background:yellow;">b yellow</th>
+                      <th style="color: yellow;">f yellow</th>
+                    </tr>
+                    <tr>
+                      <th style="color:black; background:white;">b white</th>
+                      <th style="color:white;">f white</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </ul>
+            </div>
+            <div>
+              <li><span>evolve [&lt;Pokémon name&gt; &lt;empty<span class="see-vertical-bar">|</span>abilities<span class="see-vertical-bar">|</span>moves<span class="see-vertical-bar">|</span>bmi<span class="see-vertical-bar">|</span>stats<span class="see-vertical-bar">|</span>type&gt;]<span class="see-vertical-bar">|</span>[damage &lt;pk type&gt;] <span class="commented">#leave empty to get evolution chain</span></span>
+              </li>
               <ul>
                 <li><span class="commented">#augments</span></li>
-                <li><span>&lt;Pokémon name&gt; <span class="commented">#everyone up</span></span>
+                <div>
+                  <li>
+                    <span>&lt;Pokémon name&gt;</span>
+                    <span class="commented">#everyone up</span>
+                  </li>
                   <ul>
                     <li><span>empty <span class="commented"> #gets evolution chain and Minimum Level(ML) to evolve</span></span></li>
                     <li><span>abilities <span class="commented"> #gets the abilities of the pokemon</span></span></li>
@@ -1274,17 +1397,21 @@
                     <li><span>stats <span class="commented"> #gets stats of the pokemon: hp, attack, defense, special-attack, special-defense, speed,</span></span></li>
                     <li><span>type <span class="commented"> #gets the type of Pokemon: fire, fighting, etc.</span></span></li>
                   </ul>
-                </li>
-                <li><span>damge <span class="commented">#everyone up</span></span>
+                </div>
+                <div>
+                  <li>
+                    <span>damge</span>
+                    <span class="commented">#everyone up</span>
+                  </li>
                   <ul>
                     <li>
                       <span>&lt;pk type&gt;</span>
                       <span class="commented"> #get damage relations of a Pokémon type; eg fire, fighting</span>
                     </li>
                   </ul>
-                </li>
+                </div>
               </ul>
-            </li>
+            </div>
           </ul>
         </section>
       </div>
