@@ -344,6 +344,10 @@ nav ul {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.tr_empty {
+  color: #1F2227;
+}
+
 table {
   border-collapse: collapse;
   text-align: left;
