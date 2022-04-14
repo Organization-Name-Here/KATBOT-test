@@ -300,6 +300,7 @@
         <ul class="item">
           <li class=""><a class="" href="#twitch api">twitch api</a></li>
           <li class=""><a class="" href="#commands">commands</a></li>
+          <li class=""><a class="" href="#Pokemon">Pokémon </a></li>
         </ul>
       </nav>
       <div class="docdiv" id="main">
@@ -916,7 +917,6 @@
                 <span>- removes given repeating message</span>
               </li>
               <ul>
-
                 <li>
                   <span>example:</span>
                   <code>repeatmsg remove &lt;repeatmsg name&gt;</code>
@@ -926,8 +926,8 @@
           </ul>
         </section>
         <hr>
-        <section id="channel moderation" class="">
-          <h2>Channel moderation</h2>
+        <section class="" id="permit">
+          <h2>permit</h2>
           <ul>
             <li><code>permit &lt;viewer&gt;</code>
               <span>- allows a non mod/vip/sub to post one link</span></li>
@@ -1418,60 +1418,62 @@
                 </table>
               </ul>
             </div>
-            <div>
-              <li><span>evolve </span><span style="display:none;">
-                  [&lt;Pokémon name&gt; &lt;empty<span class="see-vertical-bar">|</span>abilities<span class="see-vertical-bar">|</span>moves<span class="see-vertical-bar">|</span>bmi<span class="see-vertical-bar">|</span>stats<span class="see-vertical-bar">|</span>type&gt;]<span class="see-vertical-bar">|</span>[damage &lt;pk type&gt;] </span><span class="commented">#leave empty to get evolution chain</span>
-              </li>
-              <ul>
-                <div>
+          </ul>
+        </section>
+        <section id="Pokemon" class="">
+          <h2>Pokémon</h2>
+          <div>
+            <li><span>evolve </span><span style="display:none;">
+                [&lt;Pokémon name&gt; &lt;empty<span class="see-vertical-bar">|</span>abilities<span class="see-vertical-bar">|</span>moves<span class="see-vertical-bar">|</span>bmi<span class="see-vertical-bar">|</span>stats<span class="see-vertical-bar">|</span>type&gt;]<span class="see-vertical-bar">|</span>[damage &lt;pk type&gt;] </span><span class="commented">#leave empty to get evolution chain</span>
+            </li>
+            <ul>
+              <div>
+                <li>
+                  <code>evelve &lt;Pokémon name&gt;<span> &lt;empty<span class="see-vertical-bar">|</span>abilities<span class="see-vertical-bar">|</span>moves<span class="see-vertical-bar">|</span>bmi<span class="see-vertical-bar">|</span>stats<span class="see-vertical-bar">|</span>type&gt;</span></code>
+                </li>
+                <ul>
+                  <li><span>empty </span><span class="commented"> #gets evolution chain and Minimum Level(ML) to evolve</span></li>
+                  <li><span>abilities </span><span class="commented"> #gets the abilities of the pokemon</span></li>
+                  <li><span>moves </span><span class="commented"> #GETS ALL the moves for the pokemon from across all games DOES NOT tell you what move comes from where</span></li>
+                  <li><span>bmi </span><span class="commented"> #gets height and Weight of the pokemon and calculates the bmi(body mass index)</span></li>
+                  <li><span>stats </span><span class="commented"> #gets stats of the pokemon: hp, attack, defense, special-attack, special-defense, speed,</span></li>
+                  <li><span>type </span><span class="commented"> #gets the type of Pokemon: fire, fighting, etc.</span></li>
+                </ul>
+              </div>
+              <div>
+                <li>
+                  <code>evolve damge &lt;pk type&gt;</code></li>
+                <ul>
                   <li>
-                    <code>evelve &lt;Pokémon name&gt;
-                      <span>&lt;empty<span class="see-vertical-bar">|</span>abilities<span class="see-vertical-bar">|</span>moves<span class="see-vertical-bar">|</span>bmi<span class="see-vertical-bar">|</span>stats<span class="see-vertical-bar">|</span>type&gt;</span></code>
+                    <span>Pokémon types</span>
+                    <span class="commented"> #get damage relations of a Pokémon type; eg fire, fighting</span>
                   </li>
                   <ul>
-                    <li><span>empty </span><span class="commented"> #gets evolution chain and Minimum Level(ML) to evolve</span></li>
-                    <li><span>abilities </span><span class="commented"> #gets the abilities of the pokemon</span></li>
-                    <li><span>moves </span><span class="commented"> #GETS ALL the moves for the pokemon from across all games DOES NOT tell you what move comes from where</span></li>
-                    <li><span>bmi </span><span class="commented"> #gets height and Weight of the pokemon and calculates the bmi(body mass index)</span></li>
-                    <li><span>stats </span><span class="commented"> #gets stats of the pokemon: hp, attack, defense, special-attack, special-defense, speed,</span></li>
-                    <li><span>type </span><span class="commented"> #gets the type of Pokemon: fire, fighting, etc.</span></li>
+                    <li><span>normal</span></li>
+                    <li><span>fighting</span></li>
+                    <li><span>flying</span></li>
+                    <li><span>poison</span></li>
+                    <li><span>ground</span></li>
+                    <li><span>rock</span></li>
+                    <li><span>bug</span></li>
+                    <li><span>ghost</span></li>
+                    <li><span>steel</span></li>
+                    <li><span>fire</span></li>
+                    <li><span>water</span></li>
+                    <li><span>grass</span></li>
+                    <li><span>electric</span></li>
+                    <li><span>psychic</span></li>
+                    <li><span>ice</span></li>
+                    <li><span>dragon</span></li>
+                    <li><span>dark</span></li>
+                    <li><span>fairy</span></li>
+                    <li><span>unknown</span></li>
+                    <li><span>shadow</span></li>
                   </ul>
-                </div>
-                <div>
-                  <li>
-                    <code>evolve damge &lt;pk type&gt;</code></li>
-                  <ul>
-                    <li>
-                      <span>Pokémon types</span>
-                      <span class="commented"> #get damage relations of a Pokémon type; eg fire, fighting</span>
-                    </li>
-                    <ul>
-                      <li><span>normal</span></li>
-                      <li><span>fighting</span></li>
-                      <li><span>flying</span></li>
-                      <li><span>poison</span></li>
-                      <li><span>ground</span></li>
-                      <li><span>rock</span></li>
-                      <li><span>bug</span></li>
-                      <li><span>ghost</span></li>
-                      <li><span>steel</span></li>
-                      <li><span>fire</span></li>
-                      <li><span>water</span></li>
-                      <li><span>grass</span></li>
-                      <li><span>electric</span></li>
-                      <li><span>psychic</span></li>
-                      <li><span>ice</span></li>
-                      <li><span>dragon</span></li>
-                      <li><span>dark</span></li>
-                      <li><span>fairy</span></li>
-                      <li><span>unknown</span></li>
-                      <li><span>shadow</span></li>
-                    </ul>
-                  </ul>
-                </div>
-              </ul>
-            </div>
-          </ul>
+                </ul>
+              </div>
+            </ul>
+          </div>
         </section>
       </div>
     </div>
