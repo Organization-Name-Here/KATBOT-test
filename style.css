@@ -107,16 +107,7 @@ nav li {
 }
 
 #header {
-  background: #2c323d;
-  /* position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  color: #fff;
-  z-index: 10;
-  font-size: 0.9rem;
-  line-height: 0;
-  height: 50px; */
+  background: #1F2227;
 }
 
 #header .container2 {
@@ -352,13 +343,23 @@ th {
   border: 1px solid #ccc;
 }
 
-a{
-  color:#ff4141;
+a {
+  color: #ff4141;
   text-decoration: unset;
 }
+
 a:hover {
-  color:#58a6ff;
+  color: #58a6ff;
   text-decoration: underline;
+}
+
+#sidebar a:hover {
+  color: #58a6ff;
+  text-decoration: underline !important;
+}
+
+.sidebar a.highlighted:hover {
+  color: white !important;
 }
 
 code {
