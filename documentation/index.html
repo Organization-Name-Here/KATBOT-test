@@ -13,7 +13,7 @@
       <div class="container2">
         <div class="nav__logo">
           <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="300.000000pt" height="325.000000pt" viewBox="0 0 300.000000 325.000000" preserveAspectRatio="xMidYMid meet">
-            <title>Spit fire by Dimfann</title>
+            <title>Spitfire by Dimfann</title>
             <g transform="translate(0.000000,325.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
               <path d="M501 3235 c1 -44 25 -159 32 -149 7 13 -11 131 -24 154 -7 12 -8 11 -8 -5z"></path>
               <path d="M640 3228 c-22 -9 -40 -21 -40 -26 0 -9 139 10 173 24 12 4 29 -1 47 -15 32 -23 89 -28 108 -9 17 17 15 48 -3 48 -8 0 -15 -6 -15 -14 0 -22 -32 -25 -66 -5 -39 23 -146 21 -204 -3z"></path>
@@ -920,8 +920,10 @@
                   <th><code>{datetime()}</code></th>
                   <th>
                     <div>
-                      <span>adds EST(eastern standard time) timestamp by default in 12 hour(hour:minute:second). it can take any of the formating codes</span>
-                      <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes">here</a>
+                      <span>adds EST(eastern standard time) timestamp by default in 12 hour(hour:minute:second).</span>
+                      <br>
+                      <span>it can take any of the formating codes</span>
+                      <a href="https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes">at the python datetime documentation</a>
                       <br>
                       <span>with the adition of Mdo</span>
                       <span class="warning">(no % in fromt of it)</span>
@@ -931,7 +933,7 @@
                       <br>
                       <span>example:</span>
                       <code>{datetime(%A %B Mdo %Y %I:%M%:S:%p)}</code>
-                      <span id="datetime"> - would return "Saturday April 16th 2022 08:03 PM" in EST</span>
+                      <span id="datetime"></span>
                     </div>
                   </th>
                 </tr>
