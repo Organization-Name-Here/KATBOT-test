@@ -324,11 +324,11 @@ nav li {
 }
 
 #sidebar {
-  padding: 2.5rem;
   width: 15em;
   overflow-y: auto;
   border-right: 1px solid #D9D9DE;
-  padding-right: 0.5em;
+  padding-top: 10px;
+  padding-left: 20px;
 }
 
 .title {
@@ -342,10 +342,6 @@ nav ul {
 
 .tr_title {
   background: rgba(0, 0, 0, 0.5);
-}
-
-.tr_empty {
-  color: #1F2227;
 }
 
 table {
