@@ -353,6 +353,15 @@ th {
   border: 1px solid #ccc;
 }
 
+a{
+  color:#4483ca;
+  text-decoration: unset;
+}
+a:hover {
+  color:#58a6ff;
+  text-decoration: underline;
+}
+
 code {
   background: #333;
   color: #fff;
