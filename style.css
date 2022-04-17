@@ -1,5 +1,5 @@
 body {
-  background: #1F2227;
+  background: #181a1d;
   font-family: Calibri, sans-serif;
   color: white;
   margin: 0px;
@@ -142,7 +142,6 @@ nav li {
 }
 
 .docdiv {
-  background: #1F2227;
   color: white;
   /*! margin: 0 0 0 250px; */
   overflow-y: auto;
@@ -354,7 +353,7 @@ th {
 }
 
 a{
-  color:#4483ca;
+  color:#ff4141;
   text-decoration: unset;
 }
 a:hover {
