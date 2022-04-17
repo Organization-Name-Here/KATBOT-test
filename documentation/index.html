@@ -285,8 +285,8 @@
           </ul>
           <li class="label">Channel moderation</li>
           <ul class="item">
-            <li class=""><a class="" href="#permit">permit</a></li>
-            <li class=""><a class="" href="#userlvl">ignore/regulars</a></li>
+            <li class=""><a class="" href="#regulars">permit</a></li>
+            <li class=""><a class="" href="#ignore">ignore/regulars</a></li>
           </ul>
           <li class="label">fun</li>
           <ul class="item">
@@ -317,7 +317,16 @@
         <section id="guide lines" class="">
           <h2>guide lines</h2>
           <ul>
-            <li><span class="warning"><b>YES PUT THE</b> <span class="double-qoute">"</span> yes thay have to be <span class="double-qoute">"</span> <b>NOT</b> <span class="single-qoute">'</span></span></li>
+            <li>
+              <span class="warning">
+                <b>YES PUT THE</b>
+                <span class="double-qoute">"</span>
+                <span>yes thay have to be</span>
+                <span class="double-qoute">"</span>
+                <b>NOT</b>
+                <span class="single-qoute">'</span>
+              </span>
+            </li>
             <li><span>every thing outside of these &lt;x&gt; within [ ] is required</span></li>
             <div>
               <li>
@@ -329,19 +338,44 @@
               </ul>
             </div>
             <li><span class="see-vertical-bar">|</span> = or</li>
-            <li><span><span class="red">&lt;<span class="white">x</span>&gt;</span> one input</span></li>
-            <li><span><span class="green">&lt;<span class="white">y</span>&gt;</span> another input</span></li>
-            <li><span><span class="blue">&lt;<span class="white">z</span>&gt;</span> a third input</span></li>
-            <li><span>&lt;x<span class="see-vertical-bar">|</span>y<span class="see-vertical-bar">|</span>z&gt; x or y or z</span></li>
+            <li>
+              <span class="red">&lt;<span class="white">x</span>&gt;</span>
+              one input
+            </li>
+            <li>
+              <span class="green">&lt;<span class="white">y</span>&gt;</span>
+              another inpu
+            </li>
+            <li>
+              <span class="blue">&lt;<span class="white">z</span>&gt;</span>
+              a third input
+            </li>
+            <li>
+              &lt;x<span class="see-vertical-bar">|</span>y<span class="see-vertical-bar">|</span>z&gt;
+              x or y or z
+            </li>
             <li><span>[] option</span></li>
-            <li><span>[&lt;x&gt; &lt;y<span class="see-vertical-bar">|</span>z&gt;] x and y or x and z</span></li>
-            <li><span><span class="colorretate">&lt;<span class="white">viewer</span>&gt;</span> viewer name</span></li>
-            <li><span><span class="colorretate">&lt;<span class="white">empty</span>&gt;</span> nothing for that input</span></li>
+            <li>
+              [&lt;x&gt; &lt;y<span class="see-vertical-bar">|</span>z&gt;]
+              x and y or x and z
+            </li>
+            <li>
+              <span class="colorretate">&lt;<span class="white">viewer</span>&gt;</span>
+              viewer name
+            </li>
+            <li>
+              <span class="colorretate">&lt;<span class="white">empty</span>&gt;</span>
+              nothing for that input
+            </li>
             <li><span>None means there is no augments at all, NOT None being the augment</span></li>
-            <li><span><span class="warning">()</span> is a note and only there to clarify usage <span class="warning">DO NOT</span> add <span class="warning">()</span> or anything inside it in message</span></li>
+            <li>
+              <span class="warning">()</span>
+              is a note and only there to clarify usage
+              <span class="warning">DO NOT</span> add <span class="warning">()</span>
+              or anything inside it in message
+            </li>
             <div>
-              <li><span class="commented">#access hierarchy</span>
-              </li>
+              <li><span class="commented">#access hierarchy</span></li>
               <ul>
                 <li><span>creator</span></li>
                 <li><span>broadcaster</span></li>
@@ -366,11 +400,18 @@
               <li><span>use of <span class="colorretate">$</span> is allowed usage shown in <a class="" href="#messageaug">message augments</a></span>
               </li>
               <ul>
-                <li><span class="warning">using</span><code>{user}</code><span class="warning">or</span><code>{input}</code><span class="warning">more than once will result in duplicate text but you CAN use them more than once if you want</span></li>
+                <li>
+                  <span class="warning">using</span>
+                  <code>{user}</code>
+                  <span class="warning">or</span>
+                  <code>{input}</code>
+                  <span class="warning">more than once will result in duplicate text but you CAN use them more than once if you want</span>
+                </li>
               </ul>
             </div>
             <div>
-              <li><code>commands add &lt;command name&gt; &lt;response&gt;</code>
+              <li>
+                <code>commands add &lt;command name&gt; &lt;response&gt;</code>
                 <span>creates a command</span>
               </li>
               <ul>
@@ -382,7 +423,8 @@
               </ul>
             </div>
             <div>
-              <li><code>commands edit &lt;command name&gt; &lt;response&gt;</code>
+              <li>
+                <code>commands edit &lt;command name&gt; &lt;response&gt;</code>
                 <span>edits given command</span>
               </li>
               <ul>
@@ -393,13 +435,16 @@
                 </li>
               </ul>
             </div>
-            <li><code>commands remove &lt;command name&gt;</code>
+            <li>
+              <code>commands remove &lt;command name&gt;</code>
               <span>- removes given command</span>
             </li>
-            <li><code>commands access &lt;command name&gt; &lt;mod<span class="see-vertical-bar">|</span>vip<span class="see-vertical-bar">|</span>sub<span class="see-vertical-bar">|</span>eve&gt; &lt;true<span class="see-vertical-bar">|</span>false&gt;</code>
+            <li>
+              <code>commands access &lt;command name&gt; &lt;mod<span class="see-vertical-bar">|</span>vip<span class="see-vertical-bar">|</span>sub<span class="see-vertical-bar">|</span>eve&gt; &lt;true<span class="see-vertical-bar">|</span>false&gt;</code>
               <span>- makes command usable by given acces level</span>
             </li>
-            <li><code>commands access &lt;command name&gt; &lt;user&gt;</code>
+            <li>
+              <code>commands access &lt;command name&gt; &lt;user&gt;</code>
               <span>- makes command only usable to given user</span>
             </li>
           </ul>
@@ -435,37 +480,49 @@
             </div>
             <div>
               <li>
-                <code>autoreply edit &lt;autoreply name&gt; &lt;response&gt;</code>
-                <span>- edits a given auto reply</span>
-              </li>
-              <ul>
-                <li>
-                  <span>example:</span>
-                  <code>autoreply edit error this might be a error you should check</code>
-                  <span> - edits autoreply "error" to "this might be a error you should check"</span>
-                </li>
-                <li>
-                  <span>example:</span>
-                  <code>autoreply edit error chance 60</code>
-                  <span> - edits autoreply "error" random chance to 60</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <li>
                 <code>autoreply remove &lt;autoreply name&gt;</code>
                 <span>removes given auto reply</span>
               </li>
+            </div>
+            <div>
+              <li>
+                <span class="notice_me">edit</span>
+              </li>
+              <ul>
+                <li>
+                  <code>autoreply edit &lt;autoreply name&gt; &lt;response&gt;</code>
+                  <span>- edits a given auto reply massage</span>
+                </li>
+                <ul>
+                  <li>
+                    <span>example:</span>
+                    <code>autoreply edit error this might be a error you should check</code>
+                    <span> - edits autoreply "error" to "this might be a error you should check"</span>
+                  </li>
+                </ul>
+                <li>
+                  <code>autoreply edit &lt;autoreply name&gt; chance &lt;number&gt;</code>
+                  <span>- edits a given auto reply chance</span>
+                </li>
+                <ul>
+                  <li>
+                    <span>example:</span>
+                    <code>autoreply edit error chance 60</code>
+                    <span> - edits autoreply "error" random chance to 60</span>
+                  </li>
+                </ul>
+              </ul>
             </div>
             <br>
             <div>
               <li><span class="notice_me">default</span></li>
               <ul>
                 <li>
-                  <span>firsttimechattergreeting</span>
-                  <span class="commented">#first time chatter greeting</span>
+                  <code title="(its long I know...)">firsttimechattergreeting</code>
+                  <span>- first time chatter greeting it sends a message when its a viewers first time chatting</span>
                   <br>
-                  <span title="(its long I know...)">it CAN NOT BE DELETED but the chance and message can be changed</span><br><span>send a message when its a viewers first time chatting</span>
+                  <span>it <span class="warning">CAN NOT BE DELETED</span> but the chance and message can be changed</span>
+                  <br>
                   <table>
                     <tbody>
                       <tr class="tr_title ">
@@ -497,7 +554,8 @@
               <li>use of <span class="colorretate">$</span> is allowed usage shown in <a class="" href="#messageaug">message augments</a>
               </li>
               <ul>
-                <li><code>{input}</code>
+                <li>
+                  <code>{input}</code>
                   and
                   <code>{cv-}</code>
                   <span class="warning">DO NOT work in vars and will be removed</span>
@@ -529,7 +587,8 @@
               </ul>
             </div>
             <div>
-              <li><code>localvars add &lt;var name&gt; &lt;x&gt;</code>
+              <li>
+                <code>localvars add &lt;var name&gt; &lt;x&gt;</code>
                 <span> - creates a variable</span>
               </li>
               <ul>
@@ -541,7 +600,8 @@
               </ul>
             </div>
             <div>
-              <li><code>localvars edit &lt;var name&gt; &lt;x&gt;</code>
+              <li>
+                <code>localvars edit &lt;var name&gt; &lt;x&gt;</code>
                 <span>- edits a given var</span>
               </li>
               <ul>
@@ -623,7 +683,10 @@
               </ul>
             </div>
             <div>
-              <li><code>repeatmsg add &lt;repeatmsg name&gt; &lt;x&gt;</code><span>- creates a repeat message that repeats every 30 minutes only if 10 messages have passed in that time otherwise the time restarts</span></li>
+              <li>
+                <code>repeatmsg add &lt;repeatmsg name&gt; &lt;x&gt;</code>
+                <span>- creates a repeat message that repeats every 30 minutes only if 10 messages have passed in that time otherwise the time restarts</span>
+              </li>
               <ul>
                 <li>
                   <span>example:</span>
@@ -667,24 +730,21 @@
           </ul>
         </section>
         <hr>
-        <section class="" id="permit">
-          <h2>permit</h2>
-          <ul>
-            <li><code>permit &lt;viewer&gt;</code>
-              <span>- allows a non mod/vip/sub to post one link</span>
-            </li>
-          </ul>
-        </section>
-        <section class="" id="userlvl">
-          <h2>userlvl</h2>
+        <section class="" id="regulars">
+          <h2>regulars</h2>
           <ul>
             <li>
               <code>userlvl regulars &lt;add<span class="see-vertical-bar">|</span>remove&gt; &lt;name&gt;</code>
               <span>adds given user to regulars </span>
             </li>
+          </ul>
+        </section>
+        <section class="" id="ignore">
+          <h2>ignore</h2>
+          <ul>
             <li>
               <code>userlvl ignore &lt;add<span class="see-vertical-bar">|</span>remove&gt; &lt;name&gt;</code>
-              <span>adds given user to regulars </span>
+              <span>adds given user to ignore list</span>
             </li>
           </ul>
         </section>
@@ -693,8 +753,14 @@
           <h2>general fun</h2>
           <ul>
             <li><span>touch</span></li>
-            <li><span>me &lt;x&gt; <span class="commented">#uses /me command as KATBOT</span></span></li>
-            <li><span>8ball &lt;x&gt; <span class="commented">#ask the magic 8ball a question</span></span></li>
+            <li>
+              <code>me &lt;x&gt;</code>
+              <span class="commented">#uses /me command as KATBOT</span>
+            </li>
+            <li>
+              <code>8ball &lt;x&gt;</code>
+              <span class="commented">#ask the magic 8ball a question</span>
+            </li>
             <div>
               <li><span>roll</span></li>
               <ul>
@@ -704,11 +770,11 @@
                 </li>
                 <li>
                   <code>roll &lt;x&gt;</code>
-                  <span>- rolls x amound of dice</span>
+                  <span>- rolls x amount of 6 sided dice</span>
                 </li>
                 <li>
-                  <code>roll</code>
-                  <span>rolls &lt;x&gt; number of &lt;y&gt; sided dies</span>
+                  <code>roll &lt;x&gt; d&lt;y&gt;</code>
+                  <span>rolls x number of y sided dice</span>
                 </li>
               </ul>
             </div>
@@ -719,7 +785,11 @@
                   <code>joke</code>
                   <span>- tell you a joke if joke does not have id joke is bulit in</span>
                 </li>
-                <li><code>joke api &lt;id of joke&gt; </code><span>- gets joke from given id from </span><a href="https://icanhazdadjoke.com/">i can haz dad joke</a></li>
+                <li>
+                  <code>joke api &lt;id of joke&gt;</code>
+                  <span>- gets joke from given id from </span>
+                  <a href="https://icanhazdadjoke.com/">i can haz dad joke</a>
+                </li>
               </ul>
             </div>
             <li><span>suzy "&lt;x&gt;" "&lt;y&gt;" "&lt;z&gt;"</span></li>
@@ -752,10 +822,12 @@
             <div>
               <li><span>house</span></li>
               <ul>
-                <code>house</code>
-                <span>- He kneels before no banner, owes allegiance to no Kell.</span>
+                <li>
+                  <code>house</code>
+                  <span>- He kneels before no banner, owes allegiance to no Kell.</span>
+                </li>
+                <li><code>house &lt;x&gt;</code></li>
               </ul>
-              <ul><code>house &lt;x&gt;</code></ul>
             </div>
             <div>
               <li><span>didnt &lt;viewer<span class="see-vertical-bar">|</span>empty&gt;<span class="see-vertical-bar">|</span>&lt;viewer&gt; &lt;another viewer<span class="see-vertical-bar">|</span>empty&gt;</span><span>empty&gt;</span></li>
@@ -778,7 +850,6 @@
         </section>
         <section id="quotes" class="">
           <h2>Quotes</h2>
-          <span>empty gives quote, index gives given quote in that index</span>
           <ul>
             <li>
               <span class="notice_me">quote</span>
@@ -786,16 +857,20 @@
             </li>
             <ul>
               <li>
-                <code>quote &lt;index&gt;</code>
-                <span>- returns quote in given index</span>
-              </li>
-              <li>
                 <code>quote add</code>
                 <span>- adds given quote</span>
               </li>
               <li>
                 <code>quote remove</code>
                 <span> - removed given quote</span>
+              </li>
+              <li>
+                <code>quote &lt;number&gt;</code>
+                <span>- returns quote in given index</span>
+              </li>
+              <li>
+                <code>quote index &lt;quote&gt;</code>
+                <span>- returns index for given quote</span>
               </li>
             </ul>
             <li><span>other</span></li>
@@ -1009,7 +1084,8 @@
         <section id="symbol" class="">
           <h2>symbol</h2>
           <ul>
-            <li><code>msgfilters symbol &lt;active<span class="see-vertical-bar">|</span>messageactive<span class="see-vertical-bar">|</span>message<span class="see-vertical-bar">|</span>reason<span class="see-vertical-bar">|</span>punishment<span class="see-vertical-bar">|</span>fail&gt;</code>
+            <li>
+              <code>msgfilters symbol &lt;active<span class="see-vertical-bar">|</span>messageactive<span class="see-vertical-bar">|</span>message<span class="see-vertical-bar">|</span>reason<span class="see-vertical-bar">|</span>punishment<span class="see-vertical-bar">|</span>fail&gt;</code>
               <span>- symbol spam prevention and punishment</span>
             </li>
             <table>
@@ -1113,6 +1189,10 @@
                 <span>its just a wild card but others will work too</span>
               </div>
             </ul>
+            <li>
+              <code>permit &lt;viewer&gt;</code>
+              <span>- allows a non mod/vip/sub to post one link</span>
+            </li>
             <table>
               <tbody>
                 <tr class="tr_title">
