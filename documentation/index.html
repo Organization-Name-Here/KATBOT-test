@@ -271,36 +271,45 @@
     </nav>
     <div class="grid">
       <nav id="sidebar" class="sidebar">
-        <p class="label">General</p>
-        <ul class="item">
-          <li class=""><a class="" href="#guide lines">guide lines</a></li>
-        </ul>
-        <p class="label">Custom commands</p>
-        <ul class="item">
-          <li class=""><a class="" href="#custom commands">Custom commands</a></li>
-          <li class=""><a class="" href="#autoreplies">Auto replies</a></li>
-          <li class=""><a class="" href="#variables">Variables</a></li>
-          <li class=""><a class="" href="#repeating messages">Repeating messages</a></li>
-        </ul>
-        <p class="label">Channel moderation</p>
-        <ul class="item">
-          <li class=""><a class="" href="#permit">permit</a></li>
-          <li class=""><a class="" href="#userlvl">ignore/regulars</a></li>
-        </ul>
-        <p class="label">fun</p>
-        <ul class="item">
-          <li class=""><a class="" href="#general fun">general fun</a></li>
-          <li class=""><a class="" href="#quotes">Quotes</a></li>
-        </ul>
-        <p class="label">massage augments</p>
-        <ul class="item">
-          <li class=""><a class="" href="#messageaug">augments</a></li>
-        </ul>
-        <p class="label">misc</p>
-        <ul class="item">
-          <li class=""><a class="" href="#twitch api">twitch api</a></li>
-          <li class=""><a class="" href="#commands">commands</a></li>
-          <li class=""><a class="" href="#Pokemon">Pokémon </a></li>
+        <ul>
+          <li class="label">General</li>
+          <ul class="item">
+            <li class=""><a class="" href="#guide lines">guide lines</a></li>
+          </ul>
+          <li class="label">Custom commands</li>
+          <ul class="item">
+            <li class=""><a class="" href="#custom commands">Custom commands</a></li>
+            <li class=""><a class="" href="#autoreplies">Auto replies</a></li>
+            <li class=""><a class="" href="#variables">Variables</a></li>
+            <li class=""><a class="" href="#repeating messages">Repeating messages</a></li>
+          </ul>
+          <li class="label">Channel moderation</li>
+          <ul class="item">
+            <li class=""><a class="" href="#permit">permit</a></li>
+            <li class=""><a class="" href="#userlvl">ignore/regulars</a></li>
+          </ul>
+          <li class="label">fun</li>
+          <ul class="item">
+            <li class=""><a class="" href="#general fun">general fun</a></li>
+            <li class=""><a class="" href="#quotes">Quotes</a></li>
+          </ul>
+          <li class="label">massage augments</li>
+          <ul class="item">
+            <li class=""><a class="" href="#messageaug">augments</a></li>
+          </ul>
+          <li class="label">massage filters</li>
+          <ul class="item">
+            <li class=""><a class="" href="#symbol">symbol</a></li>
+            <li class=""><a class="" href="#caps">caps</a></li>
+            <li class=""><a class="" href="#link_detection">link detection</a></li>
+            <li class=""><a class="" href="#phrase_blacklist">phrase blacklist</a></li>
+          </ul>
+          <li class="label">misc</li>
+          <ul class="item">
+            <li class=""><a class="" href="#twitch api">twitch api</a></li>
+            <li class=""><a class="" href="#commands">commands</a></li>
+            <li class=""><a class="" href="#Pokemon">Pokémon </a></li>
+          </ul>
         </ul>
       </nav>
       <div class="docdiv" id="main">
@@ -362,7 +371,8 @@
             </div>
             <div>
               <li><code>commands add &lt;command name&gt; &lt;response&gt;</code>
-                <span>creates a command</span></li>
+                <span>creates a command</span>
+              </li>
               <ul>
                 <li>
                   <span>Example:</span>
@@ -373,7 +383,8 @@
             </div>
             <div>
               <li><code>commands edit &lt;command name&gt; &lt;response&gt;</code>
-                <span>edits given command</span></li>
+                <span>edits given command</span>
+              </li>
               <ul>
                 <li>
                   <span>Example:</span>
@@ -383,11 +394,14 @@
               </ul>
             </div>
             <li><code>commands remove &lt;command name&gt;</code>
-              <span>- removes given command</span></li>
+              <span>- removes given command</span>
+            </li>
             <li><code>commands access &lt;command name&gt; &lt;mod<span class="see-vertical-bar">|</span>vip<span class="see-vertical-bar">|</span>sub<span class="see-vertical-bar">|</span>eve&gt; &lt;true<span class="see-vertical-bar">|</span>false&gt;</code>
-              <span>- makes command usable by given acces level</span></li>
+              <span>- makes command usable by given acces level</span>
+            </li>
             <li><code>commands access &lt;command name&gt; &lt;user&gt;</code>
-              <span>- makes command only usable to given user</span></li>
+              <span>- makes command only usable to given user</span>
+            </li>
           </ul>
         </section>
         <section id="autoreplies" class="">
@@ -479,7 +493,6 @@
             <span>add/modify or remove a local variable(LV)(used in code) or return LV response given LV name or return all LVs when empty</span>
           </div>
           <ul>
-            <!--<li>localvars add<span class="see-vertical-bar">|</span>edit<span class="see-vertical-bar">|</span>&lt;empty&gt; &lt;local var name&gt; [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[<span class="warning">(only with add<span class="see-vertical-bar">|</span>edit)</span>&lt;x&gt; &lt;y&gt;]<span class="see-vertical-bar">|</span>[remove &lt;x&gt;]</li>-->
             <div>
               <li>use of <span class="colorretate">$</span> is allowed usage shown in <a class="" href="#messageaug">message augments</a>
               </li>
@@ -494,7 +507,8 @@
             <div>
               <li>
                 <code>localvars &lt;var name&gt;</code>
-                <span>- shows all available vars</span></li>
+                <span>- shows all available vars</span>
+              </li>
               <ul>
                 <li>
                   <span>example:</span>
@@ -516,7 +530,8 @@
             </div>
             <div>
               <li><code>localvars add &lt;var name&gt; &lt;x&gt;</code>
-                <span> - creates a variable</span></li>
+                <span> - creates a variable</span>
+              </li>
               <ul>
                 <li>
                   <span>example:</span>
@@ -526,32 +541,15 @@
               </ul>
             </div>
             <div>
-              <li>
-                <span>edit</span></li>
+              <li><code>localvars edit &lt;var name&gt; &lt;x&gt;</code>
+                <span>- edits a given var</span>
+              </li>
               <ul>
-                <div>
-                  <li><code>localvars edit &lt;var name&gt; &lt;x&gt;</code>
-                    <span>- edits a given var</span></li>
-                  <ul>
-                    <li>
-                      <span>example:</span>
-                      <code>localvars edit error this might be a error you should check</code>
-                      <span> - edits var "error" to "this might be a error you should check"</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <li>
-                    <code>localvars edit &lt;var name&gt; &lt;active<span class="see-vertical-bar">|</span>message<span class="see-vertical-bar">|</span>reason<span class="see-vertical-bar">|</span>punishment<span class="see-vertical-bar">|</span>fail&gt;</code>
-                    <span>- edits given aug of command</span>
-                  </li>
-                  <ul>
-                    <li>
-                      <span>example:</span>
-                      <code>localvars &lt;var name&gt;</code>
-                    </li>
-                  </ul>
-                </div>
+                <li>
+                  <span>example:</span>
+                  <code>localvars edit error this might be a error you should check</code>
+                  <span> - edits var "error" to "this might be a error you should check"</span>
+                </li>
               </ul>
             </div>
             <div>
@@ -631,231 +629,6 @@
                     </tr>
                   </tbody>
                 </table>
-                <br>
-                <table>
-                  <tbody>
-                    <tr class="tr_title">
-                      <th>var name</th>
-                      <th>info</th>
-                    </tr>
-                    <tr>
-                      <th>symbol</th>
-                      <th>symbol spam prevention and punishment</th>
-                    </tr>
-                    <tr class="tr_title">
-                      <th>value</th>
-                      <th>default</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">active</span></th>
-                      <th>false</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">amount</span></th>
-                      <th>30</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">message</span></th>
-                      <th>$@{user} please watch the symbol spam soft warning</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">reason</span></th>
-                      <th>symbol spam</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">punishment</span></th>
-                      <th>soft</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">fail</span></th>
-                      <th>soft</th>
-                    </tr>
-                    <tr class="tr_empty">
-                      <th>_</th>
-                      <th>_</th>
-                    </tr>
-                    <tr class="tr_title">
-                      <th>var name</th>
-                      <th>info</th>
-                    </tr>
-                    <tr>
-                      <th>caps</th>
-                      <th>CAPS spam prevention and punishment</th>
-                    </tr>
-                    <tr class="tr_title">
-                      <th>value</th>
-                      <th>default</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">active</span></th>
-                      <th>false</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">amount</span></th>
-                      <th>60</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">message</span></th>
-                      <th>your message contains {percent}% capital letters! soft warning. watch the caps spam</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">reason</span></th>
-                      <th>caps spam</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">punishment</span></th>
-                      <th>soft</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">fail</span></th>
-                      <th>soft</th>
-                    </tr>
-                    <tr class="tr_empty">
-                      <th>_</th>
-                      <th>_</th>
-                    </tr>
-                    <tr class="tr_title">
-                      <th>var name</th>
-                      <th>info</th>
-                    </tr>
-                    <tr>
-                      <th>link</th>
-                      <th>link detection</th>
-                    </tr>
-                    <tr class="tr_title">
-                      <th>value</th>
-                      <th>default</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">active</span></th>
-                      <th>true</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">message</span></th>
-                      <th>please ask a mod if you want to post a link</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">reason</span></th>
-                      <th>posting link without permission</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">punishment</span></th>
-                      <th>timeout</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">fail</span></th>
-                      <th>timeout</th>
-                    </tr>
-                    <tr class="tr_empty">
-                      <th>_</th>
-                      <th>_</th>
-                    </tr>
-                    <tr class="tr_title">
-                      <th>var name</th>
-                      <th>info</th>
-                    </tr>
-                    <tr>
-                      <th>banned words </th>
-                      <th>built-in list of racial and/or &lt;x&gt;phobic banned words</th>
-                    </tr>
-                    <tr class="tr_title">
-                      <th>value</th>
-                      <th>default</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">active</span></th>
-                      <th>true</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">message</span></th>
-                      <th>really? there's like only racial and &lt;x&gt;phobic slurs in this list and you used one wtf.</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">reason</span></th>
-                      <th>use of banned words</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">punishment</span></th>
-                      <th>delete</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">fail</span></th>
-                      <th>ban</th>
-                    </tr>
-                    <tr class="tr_empty">
-                      <th>_</th>
-                      <th>_</th>
-                    </tr>
-                    <tr class="tr_title">
-                      <th>var name</th>
-                      <th>info</th>
-                    </tr>
-                    <tr>
-                      <th>link blacklist</th>
-                      <th>built-in blacklisted links</th>
-                    </tr>
-                    <tr class="tr_title">
-                      <th>value</th>
-                      <th>default</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">active</span></th>
-                      <th>true</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">message</span></th>
-                      <th>please ask a mod if you want to post a link</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">reason</span></th>
-                      <th>use of black listed link</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">punishment</span></th>
-                      <th>delete</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">fail</span></th>
-                      <th>ban</th>
-                    </tr>
-                    <tr class="tr_empty">
-                      <th>_</th>
-                      <th>_</th>
-                    </tr>
-                    <tr class="tr_title">
-                      <th>var name</th>
-                      <th>info</th>
-                    </tr>
-                    <tr>
-                      <th>phrase blacklist</th>
-                      <th>built-in blacklisted phrases</th>
-                    </tr>
-                    <tr class="tr_title">
-                      <th>value</th>
-                      <th>default</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">active</span></th>
-                      <th>true</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">message</span></th>
-                      <th>$@{user} please do not use that phrase any further use may result in a moderator banning you</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">reason</span></th>
-                      <th>use of black listed phrase</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">punishment</span></th>
-                      <th>ban</th>
-                    </tr>
-                    <tr>
-                      <th><span class="none">fail</span></th>
-                      <th>ban</th>
-                    </tr>
-                  </tbody>
-                </table>
               </ul>
             </div>
           </ul>
@@ -864,8 +637,6 @@
           <h2>Repeating messages</h2>
           <span>add/modify or remove a repeating message or return repeating message response if given repeating messages name or return all repeating messages when empty, default repeat time is 30 minutes</span>
           <ul>
-            <!--<li><span>repeatmsg add<span class="see-vertical-bar">|</span>edit<span class="see-vertical-bar">|</span>&lt;empty&gt; &lt;repeating msg name&gt; [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[(only with add<span class="see-vertical-bar">|</span>edit)&lt;time<span class="see-vertical-bar">|</span>delay<span class="see-vertical-bar">|</span>empty&gt; &lt;x&gt;]<span class="see-vertical-bar">|</span>[remove &lt;x&gt;]</span>
-</li>-->
             <div>
               <li>
                 <span>use of</span>
@@ -930,7 +701,8 @@
           <h2>permit</h2>
           <ul>
             <li><code>permit &lt;viewer&gt;</code>
-              <span>- allows a non mod/vip/sub to post one link</span></li>
+              <span>- allows a non mod/vip/sub to post one link</span>
+            </li>
           </ul>
         </section>
         <section class="" id="userlvl">
@@ -938,7 +710,8 @@
           <ul>
             <li>
               <code>userlvl regulars &lt;add<span class="see-vertical-bar">|</span>remove&gt; &lt;name&gt;</code>
-              <span>adds given user to regulars </span></li>
+              <span>adds given user to regulars </span>
+            </li>
             <li>
               <code>userlvl ignore &lt;add<span class="see-vertical-bar">|</span>remove&gt; &lt;name&gt;</code>
               <span>adds given user to regulars </span>
@@ -1158,7 +931,7 @@
                       <br>
                       <span>example:</span>
                       <code>{datetime(%A %B Mdo %Y %I:%M%:S:%p)}</code>
-                      <span id="datetime"></span>
+                      <span id="datetime"> - would return "Saturday April 16th 2022 08:03 PM" in EST</span>
                     </div>
                   </th>
                 </tr>
@@ -1228,6 +1001,192 @@
           </ul>
         </section>
         <hr>
+        <section id="symbol" class="">
+          <h2>symbol</h2>
+          <ul>
+            <li><code>msgfilters symbol &lt;active<span class="see-vertical-bar">|</span>messageactive<span class="see-vertical-bar">|</span>message<span class="see-vertical-bar">|</span>reason<span class="see-vertical-bar">|</span>punishment<span class="see-vertical-bar">|</span>fail&gt;</code>
+              <span>- symbol spam prevention and punishment</span>
+            </li>
+            <table>
+              <tbody>
+                <tr class="tr_title">
+                  <th>value</th>
+                  <th>default</th>
+                </tr>
+                <tr>
+                  <th><span class="none">active</span></th>
+                  <th>false</th>
+                </tr>
+                <tr>
+                  <th><span class="none">amount</span></th>
+                  <th>30</th>
+                </tr>
+                <tr>
+                  <th><span class="none">messageactive</span></th>
+                  <th>true</th>
+                </tr>
+                <tr>
+                  <th><span class="none">message</span></th>
+                  <th>$@{user} please watch the symbol spam soft warning</th>
+                </tr>
+                <tr>
+                  <th><span class="none">reason</span></th>
+                  <th>symbol spam</th>
+                </tr>
+                <tr>
+                  <th><span class="none">punishment</span></th>
+                  <th>soft</th>
+                </tr>
+                <tr>
+                  <th><span class="none">fail</span></th>
+                  <th>soft</th>
+                </tr>
+              </tbody>
+            </table>
+          </ul>
+        </section>
+        <section class="" id="caps">
+          <h2>caps</h2>
+          <ul>
+            <li><code>msgfilters caps &lt;active<span class="see-vertical-bar">|</span>messageactive<span class="see-vertical-bar">|</span>message<span class="see-vertical-bar">|</span>reason<span class="see-vertical-bar">|</span>punishment<span class="see-vertical-bar">|</span>fail&gt;</code>
+              <span>- CAPS spam prevention and punishment</span>
+            </li>
+            <table>
+              <tbody>
+                <tr class="tr_title">
+                  <th>value</th>
+                  <th>default</th>
+                </tr>
+                <tr>
+                  <th><span class="none">active</span></th>
+                  <th>false</th>
+                </tr>
+                <tr>
+                  <th><span class="none">amount</span></th>
+                  <th>60</th>
+                </tr>
+                <tr>
+                  <th><span class="none">messageactive</span></th>
+                  <th>true</th>
+                </tr>
+                <tr>
+                  <th><span class="none">message</span></th>
+                  <th>your message contains {percent}% capital letters! soft warning. watch the caps spam</th>
+                </tr>
+                <tr>
+                  <th><span class="none">reason</span></th>
+                  <th>caps spam</th>
+                </tr>
+                <tr>
+                  <th><span class="none">punishment</span></th>
+                  <th>soft</th>
+                </tr>
+                <tr>
+                  <th><span class="none">fail</span></th>
+                  <th>soft</th>
+                </tr>
+              </tbody>
+            </table>
+          </ul>
+        </section>
+        <section id="link_detection" class="">
+          <h2>link detection</h2>
+          <ul>
+            <li><code>msgfilter link &lt;active<span class="see-vertical-bar">|</span>messageactive<span class="see-vertical-bar">|</span>message<span class="see-vertical-bar">|</span>reason<span class="see-vertical-bar">|</span>punishment<span class="see-vertical-bar">|</span>fail&gt;</code>
+            </li>
+            <ul>
+              <li><code>msgfilter link &lt;add<span class="see-vertical-bar">|</span>remove<span class="see-vertical-bar">|</span>edit&gt; &lt;x&gt;</code>
+                <span>- add whitelisted link</span>
+              </li>
+              <div>
+                <span>accepts regex in whitelisted links</span>
+                <a href="https://docs.python.org/3/library/re.html#regular-expression-syntax">documentation here</a>
+              </div>
+              <div>
+                <span>really the only one you should use is</span>
+                <code>.*</code>
+                <span>its just a wild card but others will work too</span>
+              </div>
+            </ul>
+            <table>
+              <tbody>
+                <tr class="tr_title">
+                  <th>value</th>
+                  <th>default</th>
+                </tr>
+                <tr>
+                  <th><span class="none">active</span></th>
+                  <th>true</th>
+                </tr>
+                <tr>
+                  <th><span class="none">messageactive</span></th>
+                  <th>false</th>
+                </tr>
+                <tr>
+                  <th><span class="none">message</span></th>
+                  <th>please ask a mod if you want to post a link</th>
+                </tr>
+                <tr>
+                  <th><span class="none">reason</span></th>
+                  <th>posting link without permission</th>
+                </tr>
+                <tr>
+                  <th><span class="none">punishment</span></th>
+                  <th>timeout</th>
+                </tr>
+                <tr>
+                  <th><span class="none">fail</span></th>
+                  <th>timeout</th>
+                </tr>
+              </tbody>
+            </table>
+          </ul>
+        </section>
+        <section id="phrase_blacklist" class="">
+          <h2>phrase blacklist</h2>
+          <ul>
+            <li><code>msgfilters pbl &lt;active<span class="see-vertical-bar">|</span>messageactive<span class="see-vertical-bar">|</span>message<span class="see-vertical-bar">|</span>reason<span class="see-vertical-bar">|</span>punishment<span class="see-vertical-bar">|</span>fail&gt;</code>
+            </li>
+            <ul>
+              <li><code>msgfilter pbl &lt;add<span class="see-vertical-bar">|</span>remove<span class="see-vertical-bar">|</span>edit&gt; &lt;x&gt;</code>
+                <span>- add blacklisted phrase</span>
+              </li>
+            </ul>
+            <table>
+              <tbody>
+                <tr class="tr_title">
+                  <th>value</th>
+                  <th>default</th>
+                </tr>
+                <tr>
+                  <th><span class="none">active</span></th>
+                  <th>true</th>
+                </tr>
+                <tr>
+                  <th><span class="none">messageactive</span></th>
+                  <th>false</th>
+                </tr>
+                <tr>
+                  <th><span class="none">message</span></th>
+                  <th>$@{user} please do not use that phrase any further use may result in a moderator banning you</th>
+                </tr>
+                <tr>
+                  <th><span class="none">reason</span></th>
+                  <th>use of black listed phrase</th>
+                </tr>
+                <tr>
+                  <th><span class="none">punishment</span></th>
+                  <th>ban</th>
+                </tr>
+                <tr>
+                  <th><span class="none">fail</span></th>
+                  <th>ban</th>
+                </tr>
+              </tbody>
+            </table>
+          </ul>
+        </section>
+        <hr>
         <section id="twitch api" class="">
           <h2>twitch releated</h2>
           <span>things related to twitches api and could not function</span>
@@ -1244,27 +1203,33 @@
             <li><span>followage &lt;viewer&gt; &lt;empty&gt;<span class="see-vertical-bar">|</span>stats <span class="commented">#gets how long a user or yourself has been following the broadcaster</span></span></li>
             <div>
               <li><span>title</span>
-                <span class="commented">#changes title or leave empty to current title</span></li>
+                <span class="commented">#changes title or leave empty to current title</span>
+              </li>
               <ul>
                 <li><code>title</code>
-                  <span>return current title</span></li>
+                  <span>return current title</span>
+                </li>
                 <div>
                   <li><code>title &lt;x&gt;</code>
-                    <span>- sets title</span></li>
+                    <span>- sets title</span>
+                  </li>
                   <ul>
                     <li>
                       <span>example:</span>
                       <code>title error can not get var "title"</code>
-                      <span> - sets title to "error can not get var "title""</span></li>
+                      <span> - sets title to "error can not get var "title""</span>
+                    </li>
                   </ul>
                 </div>
               </ul>
             </div>
             <li><code>searchgame &lt;x&gt;</code>
-              <span>- game look up</span></li>
+              <span>- game look up</span>
+            </li>
             <div>
               <li><span>game</span>
-                <span>changes game or leave empty to current game</span></li>
+                <span>changes game or leave empty to current game</span>
+              </li>
               <ul>
                 <li>
                   <code>game</code>
@@ -1272,11 +1237,13 @@
                 </li>
                 <div>
                   <li><code>game &lt;x&gt;</code>
-                    <span>- sets game</span></li>
+                    <span>- sets game</span>
+                  </li>
                   <ul>
                     <li>
                       <span>example:</span>
-                      <code>game halo 5</code><span> - sets game to "halo 5"</span></li>
+                      <code>game halo 5</code><span> - sets game to "halo 5"</span>
+                    </li>
                   </ul>
                 </div>
               </ul>
@@ -1298,10 +1265,6 @@
                   <code>rip</code>
                   <span> - adds death to counter</span>
                 </li>
-                <!--<li>
-  <code>rip</code>
-  <span>_____</span>
-</li>-->
                 <li>
                   <code>rip -&lt;x&gt;</code>
                   <span> - removes the number given from deaths</span>
@@ -1319,12 +1282,14 @@
             <li><span>use &lt;viewer&gt;<span class="see-vertical-bar">|</span>&lt;empty&gt; <span class="commented">#use a attack move from Pokemon</span></span></li>
             <div>
               <li>math &lt;number&gt; +<span class="see-vertical-bar">|</span>-<span class="see-vertical-bar">|</span>*<span class="see-vertical-bar">|</span>**<span class="see-vertical-bar">|</span>/<span class="see-vertical-bar">|</span>// &lt;number&gt;
-                <span class="commented">#able to do complex math +, –, *, ** (Power), / Division (float), // Division (floor) % Modulus: returns the remainder when first operand is divided by the second x % y</span></li>
+                <span class="commented">#able to do complex math +, –, *, ** (Power), / Division (float), // Division (floor) % Modulus: returns the remainder when first operand is divided by the second x % y</span>
+              </li>
               <ul>
                 <li>
                   <span>example:</span>
                   <code>math ((520/4.536)/(19*3.937)**2)*703</code>
-                  <span style="display:none;"> - sets title to "error can not get var "title""</span></li>
+                  <span style="display:none;"> - sets title to "error can not get var "title""</span>
+                </li>
               </ul>
             </div>
             <li><span>echo &lt;x&gt; <span class="commented">#makes KATBOT say what ever is after "echo "</span></span></li>
@@ -1442,7 +1407,8 @@
               </div>
               <div>
                 <li>
-                  <code>evolve damage &lt;pk type&gt;</code></li>
+                  <code>evolve damage &lt;pk type&gt;</code>
+                </li>
                 <ul>
                   <li>
                     <span>Pokémon types</span>
