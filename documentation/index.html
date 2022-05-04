@@ -391,7 +391,11 @@
         <hr>
         <section id="custom commands" class="">
           <div>
-            <h2>Custom commands</h2><span>add/modify or remove a command or return response of command when given command name or return all commands when empty for more complex commands add $ at the start of the command</span><br><br><span>access change what level of viewer can access a command can also limit it to a specific user(does not include creator or broadcaster)</span>
+            <h2>Custom commands</h2>
+            < span>add/modify or remove a command or return response of command when given command name or return all commands when empty for more complex commands add $ at the start of the command</span>
+              <br>
+              <br>
+              <span>access change what level of viewer can access a command can also limit it to a specific user(does not include creator or broadcaster)</span>
           </div>
           <ul>
             <li style="display: none;"><span>commands add<span class="see-vertical-bar">|</span>edit<span class="see-vertical-bar">|</span>access<span class="see-vertical-bar">|</span>&lt;empty&gt; &lt;command name&gt; [&lt;empty&gt;]<span class="see-vertical-bar">|</span>[(only with add<span class="see-vertical-bar">|</span>edit)&lt;x&gt; &lt;y&gt;]<span class="see-vertical-bar">|</span>[(only with edit)&lt;old command name&gt; &lt;new command name&gt;]<span class="see-vertical-bar">|</span>[remove &lt;x&gt;]</span>
@@ -452,7 +456,9 @@
         <section id="autoreplies" class="">
           <div>
             <h2>Auto replies</h2>
-            <span>add/modify or remove a auto replay or return auto replies response if given auto replay name or return all auto replies when empty</span><br><span>default random chance 30 but chance for the auto replies it can be changed after making it by using the chance augment</span>
+            <span>add/modify or remove a auto replay or return auto replies response if given auto replay name or return all auto replies when empty</span>
+            <br>
+            <span>default random chance 30 but chance for the auto replies it can be changed after making it by using the chance augment</span>
           </div>
           <ul>
             <div>
@@ -903,18 +909,19 @@
         <hr>
         <section id="messageaug" class="">
           <h2>Message augments</h2>
+          <div>
+            <span>requires</span>
+            <span class="colorretate">$</span>
+            <span>at the start of a message</span>
+            <br>
+            <br>
+            <span>adds the ability to augment messages used in "<a class="" href="#custom commands">custom commands</a>", "<a class="" href="#autoreplies">auto replys</a>", "<a class="" href="#variables">variables</a>" and "<a class="" href="#repeating messages">repeating messages</a>"</span></div>
           <ul>
             <li>
-              <span class="colorretate">$</span>
-              <span>at the start of a message</span>
+              <span>example:</span>
+              <code>$the bots name is "{nickname}"</code>
+              <span> - message will appear as "the bots name is "katcbot""</span>
             </li>
-            <ul>
-              <li>
-                <span>example:</span>
-                <code>$the bots name is "{nickname}"</code>
-                <span> - message will appear as "the bots name is "katcbot""</span>
-              </li>
-            </ul>
             <table>
               <tbody>
                 <tr class="tr_title">
@@ -927,7 +934,7 @@
                 </tr>
                 <tr>
                   <th><code>{user}</code></th>
-                  <th><span>puts user name of who used the command in the command response</span></th>
+                  <th><span>adds user name<span class="warning">(if applicable)</span> in the response</span></th>
                 </tr>
                 <tr>
                   <th><code>{nickname}</code></th>
@@ -935,11 +942,11 @@
                 </tr>
                 <tr>
                   <th><code>{game}</code></th>
-                  <th><span>puts current game name</span></th>
+                  <th><span>current game name</span></th>
                 </tr>
                 <tr>
                   <th><code>{title}</code></th>
-                  <th><span>puts current stream title</span></th>
+                  <th><span>current stream title</span></th>
                 </tr>
                 <tr>
                   <th><code>{math-(math)}</code></th>
@@ -985,66 +992,104 @@
               </tbody>
             </table>
             <br>
-            <table>
-              <tbody>
-                <tr>
-                  <th><code>{r-alistname}</code></th>
-                  <th>picks random entry from a list, available list names below</th>
-                </tr>
-                <tr class="tr_title">
-                  <th>list name</th>
-                  <th>???</th>
-                </tr>
-                <tr>
-                  <th>ball8</th>
-                  <th>ask the magic 8ball a question</th>
-                </tr>
-                <tr>
-                  <th>didnt</th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <th>farewell</th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <th>greeting</th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <th>jokes</th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <th>quotes</th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <th>iconic</th>
-                  <th>some quotes I've collected</th>
-                </tr>
-                <tr>
-                  <th>response</th>
-                  <th></th>
-                </tr>
-                <tr>
-                  <th>touch</th>
-                  <th>he doesn't like it please dont</th>
-                </tr>
-                <tr>
-                  <th>maiq</th>
-                  <th>gives you a quote from M'aiq</th>
-                </tr>
-                <tr>
-                  <th>FM</th>
-                  <th>Pokemon fighting moves</th>
-                </tr>
-                <tr>
-                  <th>Taniks</th>
-                  <th>He kneels before no banner, owes allegiance to no Kell.</th>
-                </tr>
-              </tbody>
-            </table>
+            <div>
+              <li><code>{r-alistname}</code>
+                <span>- picks random entry from a list, available list names below</span>
+                <table>
+                  <tbody>
+                    <tr class="tr_title">
+                      <th>list name</th>
+                      <th>???</th>
+                    </tr>
+                    <tr>
+                      <th>ball8</th>
+                      <th>ask the magic 8ball a question</th>
+                    </tr>
+                    <tr>
+                      <th>didnt</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <th>farewell</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <th>greeting</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <th>jokes</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <th>quotes</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <th>iconic</th>
+                      <th>some quotes I've collected</th>
+                    </tr>
+                    <tr>
+                      <th>response</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <th>touch</th>
+                      <th>he doesn't like it please dont</th>
+                    </tr>
+                    <tr>
+                      <th>maiq</th>
+                      <th>gives you a quote from M'aiq</th>
+                    </tr>
+                    <tr>
+                      <th>FM</th>
+                      <th>Pokemon fighting moves</th>
+                    </tr>
+                    <tr>
+                      <th>Taniks</th>
+                      <th>He kneels before no banner, owes allegiance to no Kell.</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+            </div>
+            <br>
+            <div>
+              <li><span>json api request</span></li>
+              <ul style="padding-left: 20px;">
+                <li>
+                  <span>example</span>
+                  <code>"${noload--https://pokeapi.co/api/v2/pokemon-species/blaziken--[generation]} blaziken was introduced in {step-json0-[name]} {step-json0-[url]}"</code>
+                  <br>
+                  <span>would return "blaziken was introduced in generation-iii https://pokeapi.co/api/v2/generation/3/"</span>
+                  <br>
+                  <span>the url would return</span>
+                  <pre style="margin: 0px 0px 0px 0px;"><code>{                                                      
+    "generation":{                                     
+        "name":"generation-iii",                       
+        "url":"https://pokeapi.co/api/v2/generation/3/"
+    }                                                  
+}                                                      </code></pre>
+                </li>
+              </ul>
+              <div><code>{noload--url--[any][amount][of][keys]}</code><span>- anything inside of a noload aug will not show in message</span>
+                <ul style="padding-left: 20px;"><span>- jsonX where x is the number of json api requests<span class="warning">(only noload and json count)</span> you have in the response from left to right, step is to be used with noload</span><br><code>{step-json<span class="warning">X</span>-[AnyAmountOfKeys]}</code></ul>
+              </div>
+              <div><code>{json--url--[any][amount][of][keys]}</code><span>- adds value at the end of any amout of keys</span></div>
+              <br>
+              <ul style="padding-left: 20px;">
+                <li>json examble</li><span>to get "<code>the value</code>" youd need to do <code>[any][amount][of][keys]</code></span>
+                <pre style="margin: 0px 0px 0px 0px;"><code>{                                 
+    "any":{                       
+        "amount":{                
+            "of":{                
+                "keys":"the value"
+            }                     
+        }                         
+    }                             
+}                                 </code></pre>
+              </ul>
+            </div>
           </ul>
         </section>
         <hr>
@@ -1473,8 +1518,11 @@
         <section id="Pokemon" class="">
           <h2>Pokémon</h2>
           <div>
-            <li><span>evolve </span><span style="display:none;">
-                [&lt;Pokémon name&gt; &lt;empty<span class="see-vertical-bar">|</span>abilities<span class="see-vertical-bar">|</span>moves<span class="see-vertical-bar">|</span>bmi<span class="see-vertical-bar">|</span>stats<span class="see-vertical-bar">|</span>type&gt;]<span class="see-vertical-bar">|</span>[damage &lt;pk type&gt;] </span><span class="commented">#leave empty to get evolution chain</span>
+            <li>
+              <span>evolve </span>
+              <span style="display:none;">
+                [&lt;Pokémon name&gt; &lt;empty<span class="see-vertical-bar">|</span>abilities<span class="see-vertical-bar">|</span>moves<span class="see-vertical-bar">|</span>bmi<span class="see-vertical-bar">|</span>stats<span class="see-vertical-bar">|</span>type&gt;]<span class="see-vertical-bar">|</span>[damage &lt;pk type&gt;] </span>
+              <span class="commented">#leave empty to get evolution chain</span>
             </li>
             <ul>
               <div>
