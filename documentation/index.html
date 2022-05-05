@@ -927,26 +927,36 @@
                 <tr class="tr_title">
                   <th><span>augment</span></th>
                   <th><span>what it does</span></th>
+                  <th>
+                    <span>X is the number of the aug</span>
+                    <br>
+                    <span>in the message starting at 0</span>
+                  </th>
                 </tr>
                 <tr>
                   <th><code>{stmrname}</code></th>
                   <th><span>adds broadcaster name to message</span></th>
+                  <th><span>does not take one</span></th>
                 </tr>
                 <tr>
                   <th><code>{user}</code></th>
                   <th><span>adds user name<span class="warning">(if applicable)</span> in the response</span></th>
+                  <th><span>does not take one</span></th>
                 </tr>
                 <tr>
                   <th><code>{nickname}</code></th>
                   <th><span>it puts katcbot.</span></th>
+                  <th><span>does not take one</span></th>
                 </tr>
                 <tr>
                   <th><code>{game}</code></th>
                   <th><span>current game name</span></th>
+                  <th><span>does not take one</span></th>
                 </tr>
                 <tr>
                   <th><code>{title}</code></th>
                   <th><span>current stream title</span></th>
+                  <th><span>does not take one</span></th>
                 </tr>
                 <tr>
                   <th><code>{math-(math)}</code></th>
@@ -955,10 +965,12 @@
                     <code>{math-(((520/4.536)/(19*3.937)**2)*703)}</code>
                     <span>in command</span>
                   </th>
+                  <th><span>{math<span class="warning">X</span>}</span></th>
                 </tr>
                 <tr>
                   <th><code>{input}</code></th>
                   <th><span>makes command able to take input from user</span></th>
+                  <th><span>{after<span class="warning">X</span>}</span></th>
                 </tr>
                 <tr>
                   <th><code>{cv-customvarname}</code></th>
@@ -967,6 +979,7 @@
                     <code>{cv-testvar}</code>
                     <span class="warning">using this in the custom var its calling does nothing and will be removed</span>
                   </th>
+                  <th><span>{cv<span class="warning">X</span>}</span></th>
                 </tr>
                 <tr>
                   <th><code>{datetime()}</code></th>
@@ -988,6 +1001,7 @@
                       <span id="datetime"></span>
                     </div>
                   </th>
+                  <th><span>{datetime<span class="warning">X</span>}</span></th>
                 </tr>
               </tbody>
             </table>
@@ -1059,7 +1073,7 @@
               <ul style="padding-left: 20px;">
                 <li>
                   <span>example</span>
-                  <code>"${noload--https://pokeapi.co/api/v2/pokemon-species/blaziken--[generation]} blaziken was introduced in {step-json0-[name]} {step-json0-[url]}"</code>
+                  <code>${silent-{json--https://pokeapi.co/api/v2/pokemon-species/blaziken--[generation]}} blaziken was introduced in {step-json0-[name]} {step-json0-[url]}</code>
                   <br>
                   <span>would return "blaziken was introduced in generation-iii https://pokeapi.co/api/v2/generation/3/"</span>
                   <br>
@@ -1072,10 +1086,17 @@
 }                                                      </code></pre>
                 </li>
               </ul>
-              <div><code>{noload--url--[any][amount][of][keys]}</code><span>- anything inside of a noload aug will not show in message</span>
-                <ul style="padding-left: 20px;"><span>- jsonX where x is the number of json api requests<span class="warning">(only noload and json count)</span> you have in the response from left to right, step is to be used with noload</span><br><code>{step-json<span class="warning">X</span>-[AnyAmountOfKeys]}</code></ul>
+              <div><code>{json--url--[any][amount][of][keys]}</code><span>- adds value at the end of any amout of keys <span class="warning">for no keys in url put []</span></span>
+                <ul style="padding-left: 20px;"><code>{step-json<span class="warning">X</span>-[AnyAmountOfKeys]}</code>
+                  <span class="warning">step should only be used with {silent-{X}}</span><br>
+                  <ul style="padding-left: 20px;">
+                    <li>
+                      <span>example</span>
+                      <code>{silent-{json--url--[any][amount][of][keys]}}</code>
+                    </li>
+                  </ul>
+                </ul>
               </div>
-              <div><code>{json--url--[any][amount][of][keys]}</code><span>- adds value at the end of any amout of keys</span></div>
               <br>
               <ul style="padding-left: 20px;">
                 <li>json examble</li><span>to get "<code>the value</code>" youd need to do <code>[any][amount][of][keys]</code></span>
